@@ -2,9 +2,11 @@ const withPlugins = require('next-compose-plugins');
 
 const withImages = require('next-images')
 
-module.exports = withPlugins([
-  withImages({ esModule: true }),
-], {
+const nextConfig = {
+  i18n: {
+    locales: ["pt-br"],
+    defaultLocale: "pt-br",
+  },
   webpackDevMiddleware: config => {
     config.watchOptions = {
       poll: 1000,
@@ -12,4 +14,8 @@ module.exports = withPlugins([
     }
     return config
   }
-})
+}
+
+module.exports = withPlugins([
+  withImages({ esModule: true }),
+], nextConfig);
