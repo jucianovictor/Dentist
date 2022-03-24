@@ -1,30 +1,30 @@
-{
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true,
-    "jest": true
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+    jest: true
   },
-  "extends": [
+  extends: [
     "eslint:recommended",
     "airbnb-typescript/base",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
     },
-    "project": "./tsconfig.json",
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    project: "./tsconfig.json",
+    ecmaVersion: 12,
+    sourceType: "module"
   },
-  "plugins": [
+  plugins: [
     "react",
     "@typescript-eslint"
   ],
-  "rules": {
+  rules: {
     "react/display-name": "off",
     "space-before-function-paren": "off",
     "react/prop-types": "off",
@@ -34,10 +34,7 @@
       "error",
       2
     ],
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
+    "linebreak-style": ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     "quotes": [
       "error",
       "single"
