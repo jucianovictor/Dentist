@@ -12,26 +12,26 @@ const ButtonBase = styled('button')`
 
 const Button = styled(ButtonBase)<{ themeColor: Color }>`
   color: ${props => props.themeColor.contrast || props.theme.colors.primary.contrast};
-  background-color: ${props => props.themeColor.value || props.theme.colors.primary.value};
+  background-color: ${props => props.themeColor.default || props.theme.colors.primary.default};
 `;
 
 const SecondaryButton = styled(Button)`
   background-color: transparent;
-  color: ${props => props.themeColor.value || props.theme.colors.primary.value};
+  color: ${props => props.themeColor.default || props.theme.colors.primary.default};
 
   &:hover {
-    border: ${props => `solid 2px ${props.themeColor.value || props.theme.colors.primary.value}` || 'none'};
+    border: ${props => `solid 2px ${props.themeColor.default || props.theme.colors.primary.default}` || 'none'};
   }
 `;
 
 const ButtonOutlineEffect = styled(Button)`
   background-color: transparent;
-  color: ${props => props.themeColor.value || props.theme.colors.primary.value};
-  border: ${props => `solid 2px ${props.themeColor.value || props.theme.colors.primary.value}` || 'none'};
+  color: ${props => props.themeColor.default || props.theme.colors.primary.default};
+  border: ${props => `solid 2px ${props.themeColor.default || props.theme.colors.primary.default}` || 'none'};
 
   &:hover {
     color: ${props => props.themeColor.contrast || props.theme.colors.primary.contrast};
-    background-color: ${props => props.themeColor.value || props.theme.colors.primary.value};
+    background-color: ${props => props.themeColor.default || props.theme.colors.primary.default};
   }
 `;
 

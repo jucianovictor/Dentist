@@ -3,7 +3,7 @@ import BaseInput from '../../styles/template/input/style';
 
 const LabbeledBaseInput = styled(BaseInput)`
   margin-top: 5px;
-  color: ${props => props.theme.colors.background.contrast};
+  color: ${props => props.theme.colors.primary.default};
 `;
 
 const TextInput = styled(LabbeledBaseInput).attrs({

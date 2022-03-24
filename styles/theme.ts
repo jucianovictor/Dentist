@@ -1,5 +1,5 @@
 export type Color = {
-  value: string,
+  default: string,
   light: string,
   dark: string,
   contrast: string,
@@ -9,29 +9,29 @@ type Theme = {
   colors: {
     primary: Color,
     secondary: Color,
-    background: Color,
+    accent: Color
   }
 };
 
 const theme: Theme = {
   colors: {
     primary: {
-      value: '#1a237e',
-      light: '#534bae',
-      dark: '#000051',
+      default: '#7061EE',
+      light: '#8f84f1',
+      dark: '#7163ed',
       contrast: '#ffffff',
     },
     secondary: {
-      value: '#69f0ae',
-      light: '#9fffe0',
-      dark: '#2bbd7e',
+      default: '#8885a3',
+      light: '#A2A1AC',
+      dark: '#696684',
       contrast: '#ffffff',
     },
-    background: {
-      value: '#e0e0e0',
-      light: '#ffffff',
-      dark: '#aeaeae',
-      contrast: '#000000',
+    accent: {
+      default: '#FF5B83',
+      dark: '#ff5c83',
+      light: '#ff868c',
+      contrast: '#fff',
     },
   },
 };
