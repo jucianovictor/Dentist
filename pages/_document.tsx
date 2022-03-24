@@ -31,10 +31,9 @@ export default class MyDocument extends Document {
 
   static render(): JSX.Element {
     return (
-      <Html lang="en-US">
+      <Html>
         <Head>
           <meta charSet="utf-8"/>
-          <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" />
         </Head>
         <body>
           <Main />

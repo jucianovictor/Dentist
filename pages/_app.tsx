@@ -4,12 +4,13 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import theme from '../styles/theme';
 import GlobalStyle from '../styles/global';
+import './_fonts.css';
 
-import LoginPage from '.';
+import LandingPage from '.';
 
 const App: React.FC<AppProps> = () => (
   <ThemeProvider theme={theme}>
-    <LoginPage />
+    <LandingPage />
     <GlobalStyle />
   </ThemeProvider>
 );
