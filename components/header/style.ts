@@ -1,9 +1,15 @@
 import styled from 'styled-components';
+import mediaSizes from '../../styles/utils/media-sizes';
 
 const HeaderContainer = styled.header`
   display: grid;
   grid-template-columns: max-content 1fr;
   padding: 3rem 5rem;
+
+  @media(max-width: ${mediaSizes.large}px) {
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
 `;
 
 const LogoTipo = styled.h1`
@@ -12,6 +18,10 @@ const LogoTipo = styled.h1`
   font-weight: 700;
   font-size: 30px;
   line-height: 45px;
+
+  @media(max-width: ${mediaSizes.large}px) {
+    display: none;
+  }
 `;
 
 const Link = styled.a`
@@ -33,6 +43,10 @@ const Navigation = styled.nav`
   column-gap: 4rem;
   align-self: center;
   align-content: start;
+
+  @media(max-width: ${mediaSizes.large}px) {
+    grid-column: 1/2;
+  }
 `;
 
 export {
