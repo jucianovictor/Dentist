@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+const ColorPrimarySpan = styled.span`
+  color: ${props => props.theme.colors.primary.default};
+`;
+
+const Text = styled.p`
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 0px 15px 0px 0px;
+  color: ${props => props.theme.colors.secondary.default};
+`;
+
 const MainPage = styled.main`
   width: 100vw;
   height: 100vh;
@@ -11,7 +25,34 @@ const MainPage = styled.main`
 const FirstSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  grid-template-rows: 100%;
+  height: max-content;
+  width: 100%;
+  height: 80vh;
+  padding: 0 50px;
+`;
+
+const FirstSectionAside = styled.aside`
+  max-width: 34.875em;
+  align-self: center;
+  display: grid;
+  row-gap: 40px;
+`;
+
+const FirstSectionImage = styled.img`
+  height: 100%;
+  width: 516px;
+  justify-self: center;
+  align-self: center;
+`;
+
+const MainTitle = styled.h1`
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 80px;
+  color: ${props => props.theme.colors.secondary.default};
 `;
 
 const SecondaryPage = styled.section`
@@ -23,7 +64,12 @@ const SecondaryPage = styled.section`
 `;
 
 export {
+  ColorPrimarySpan,
+  Text,
   MainPage,
   FirstSection,
+  FirstSectionAside,
+  FirstSectionImage,
+  MainTitle,
   SecondaryPage,
 };
