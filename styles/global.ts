@@ -7,4 +7,16 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
+
+  html {
+    width: 100%;
+    height: 100%;
+    min-width: max-content;
+    max-height: max-content;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+  }
 `;
