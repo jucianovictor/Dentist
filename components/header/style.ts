@@ -13,7 +13,6 @@ const HeaderContainer = styled.header`
 `;
 
 const LogoTipo = styled.h1`
-  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -26,7 +25,7 @@ const LogoTipo = styled.h1`
 
 const Link = styled.a`
   text-decoration: none;
-  color: ${props => props.theme.colors.secondary.dark}
+  color: ${props => props.theme.colors.secondary.default}
 `;
 
 const Navigation = styled.nav`
