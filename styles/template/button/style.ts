@@ -4,7 +4,6 @@ const ButtonBase = styled.button<{
   width: string;
   height: string;
 }>`
-  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;

@@ -26,7 +26,7 @@ const LandingPage: React.FC = () => (
           </MainTitle>
           <Text>
             is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry &apos s
+            typesetting industry. Lorem Ipsum has been the industry&apos;s
             standard dummy text ever since the 1500s,
           </Text>
           <AccentButton width='340px' height='60.5px'>Marque sua consulta</AccentButton>

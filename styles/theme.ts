@@ -22,8 +22,8 @@ const theme: Theme = {
       contrast: '#ffffff',
     },
     secondary: {
-      default: '#8885a3',
-      light: '#A2A1AC',
+      default: '#797693',
+      light: '#8885A3',
       dark: '#696684',
       contrast: '#ffffff',
     },

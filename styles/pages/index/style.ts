@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 const Text = styled.p`
-  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
   padding: 0px 15px 0px 0px;
-  color: ${props => props.theme.colors.secondary.dark};
+  color: ${props => props.theme.colors.secondary.default};
 `;
 
 const MainPage = styled.main`
@@ -43,12 +42,11 @@ const FirstSectionImage = styled.img`
 `;
 
 const MainTitle = styled.h1`
-  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 65px;
   line-height: 80px;
-  color: ${props => props.theme.colors.secondary.default};
+  color: ${props => props.theme.colors.secondary.light};
 `;
 
 const SecondaryPage = styled.section`
