@@ -37,7 +37,7 @@ const FirstSectionAside = styled.aside`
 const FirstSectionImage = styled.img`
   height: 924px;
   width: 602px;
-  justify-self: center;
+  justify-self: end;
   align-self: center;
 `;
 
