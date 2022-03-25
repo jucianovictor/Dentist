@@ -8,6 +8,12 @@ const MainPage = styled.main`
   background: linear-gradient(131.08deg, rgba(54, 34, 255, 0.12) 0.39%, rgba(245, 244, 255, 0) 60.82%);
 `;
 
+const FirstSection = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+`;
+
 const SecondaryPage = styled.section`
   width: 100vw;
   height: 100vh;
@@ -18,5 +24,6 @@ const SecondaryPage = styled.section`
 
 export {
   MainPage,
+  FirstSection,
   SecondaryPage,
 };

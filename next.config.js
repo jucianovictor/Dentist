@@ -13,9 +13,18 @@ const nextConfig = {
       aggregateTimeout: 300,
     }
     return config
+  },
+  images: {
+    disableStaticImages: true
   }
 }
 
 module.exports = withPlugins([
-  withImages({ esModule: true }),
+  withImages({ 
+    esModule: true,
+    fileExtensions: ["jpg", "jpeg", "png"],
+    webpack(config, options) {
+      return config
+    }
+  }),
 ], nextConfig);
