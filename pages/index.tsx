@@ -2,11 +2,12 @@ import Head from 'next/head';
 import React from 'react';
 import Header from '../components/header';
 import {
-  ColorPrimarySpan,
   FirstSection, FirstSectionAside, FirstSectionImage, MainPage, MainTitle, Text,
 } from '../styles/pages/index/style';
 import dentistaBanner from '../assets/dentista_banner.png';
 import { AccentButton } from '../styles/template/button/style';
+import Span from '../styles/template/shared/style';
+import theme from '../styles/theme';
 
 const LandingPage: React.FC = () => (
   <>
@@ -17,11 +18,11 @@ const LandingPage: React.FC = () => (
     <MainPage>
       <Header />
       <FirstSection>
-        <FirstSectionImage src={dentistaBanner} alt="dentist"/>
+        <FirstSectionImage src={dentistaBanner} width="602" height="924" alt="dentist"/>
         <FirstSectionAside>
           <MainTitle>
-            <ColorPrimarySpan>Lorem</ColorPrimarySpan> Ipsum is simply dummy
-            <ColorPrimarySpan>.</ColorPrimarySpan>
+            <Span color={theme.colors.primary.default}>Lorem</Span> Ipsum is simply dummy
+            <Span color={theme.colors.primary.default}>.</Span>
           </MainTitle>
           <Text>
             is simply dummy text of the printing and

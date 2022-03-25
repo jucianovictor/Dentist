@@ -1,4 +1,5 @@
 import React from 'react';
+import Span from '../../styles/template/shared/style';
 import theme from '../../styles/theme';
 import {
   HeaderContainer, Link, LogoTipo, Navigation,
@@ -20,8 +21,8 @@ const Header: React.FC = () => (
   <>
     <HeaderContainer>
       <LogoTipo>
-        <span style={{ color: theme.colors.primary.default }}>Aline</span>
-        <span style={{ color: theme.colors.secondary.dark }} > Rossi </span>
+        <Span color={theme.colors.primary.default}>Aline</Span>
+        <Span color={theme.colors.secondary.dark}> Rossi</Span>
       </LogoTipo>
       <Navigation>
         {links.map((link, key) => <Link key={key} href={link.href}>{link.label}</Link>)}
