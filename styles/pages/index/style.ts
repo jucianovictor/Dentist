@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import upDownAnimation from '../../animations/up-down';
+import MEDIA_SIZES from '../../utils/media-sizes';
 
 const Text = styled.p`
   font-style: normal;
@@ -25,6 +26,11 @@ const FirstSection = styled.section`
   height: max-content;
   width: 100%;
   padding: 0 50px;
+
+  @media(max-width: ${MEDIA_SIZES.extraLarge}px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+  }
 `;
 
 const FirstSectionAside = styled.aside`
@@ -33,12 +39,27 @@ const FirstSectionAside = styled.aside`
   align-self: center;
   display: grid;
   row-gap: 40px;
+
+  @media(max-width: ${MEDIA_SIZES.extraLarge}px) {
+    grid-column: 1;
+    justify-self: center;
+    align-self: start;
+    justify-items: center;
+
+    & p, h1 {
+      text-align: center;
+    }
+  }
 `;
 
 const FirstSectionPicture = styled.picture`
   justify-self: end;
   align-self: center;
   position: relative;
+
+  @media(max-width: ${MEDIA_SIZES.extraLarge}px) {
+    justify-self: center;
+  }
 `;
 
 const PictureParralax = styled.div<{
