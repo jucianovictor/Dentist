@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import upDownAnimation from '../../animations/up-down';
 
 const Text = styled.p`
   font-style: normal;
@@ -37,6 +38,35 @@ const FirstSectionAside = styled.aside`
 const FirstSectionPicture = styled.picture`
   justify-self: end;
   align-self: center;
+  position: relative;
+`;
+
+const PictureParralax = styled.div<{
+  left: number,
+  top: number,
+  size: number,
+}>`
+  width: ${props => props.size}px;
+  height: ${props => props.size}px;
+  left: ${props => props.left}%;
+  top: ${props => props.top}%;
+  box-shadow: 20px 50px 100px rgba(112, 97, 238, 0.53);
+  border-radius: 20px;
+  position: absolute;
+`;
+
+const PictureParralaxSolid = styled(PictureParralax)`
+  background: linear-gradient(134.26deg, ${props => props.theme.colors.primary.default} 3.81%, #AA94FF 103.06%);
+  transform: rotate(45deg);
+  z-index: -1;
+`;
+
+const PictureParralaxContent = styled(PictureParralax)`
+  background: linear-gradient(135deg, rgba(220, 217, 255, 0.41) 0%, #F5F4FF 100%);
+`;
+
+const PictureParralaxIcon = styled(PictureParralaxContent)`
+  animation: ${props => upDownAnimation(props.top, 10, '%')} 4s infinite ease-in-out;
 `;
 
 const MainTitle = styled.h1`
@@ -61,6 +91,8 @@ export {
   FirstSection,
   FirstSectionAside,
   FirstSectionPicture,
+  PictureParralaxIcon,
+  PictureParralaxSolid,
   MainTitle,
   SecondaryPage,
 };

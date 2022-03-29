@@ -7,7 +7,8 @@ import { AccentButton } from '../styles/template/button/style';
 import Span from '../styles/template/shared/style';
 import theme from '../styles/theme';
 import {
-  MainPage, FirstSection, FirstSectionPicture, FirstSectionAside, MainTitle, Text,
+  MainPage, FirstSection, FirstSectionPicture, FirstSectionAside,
+  MainTitle, Text, PictureParralaxIcon, PictureParralaxSolid,
 } from '../styles/pages/index/style';
 
 const LandingPage: React.FC = () => (
@@ -21,6 +22,9 @@ const LandingPage: React.FC = () => (
       <FirstSection>
         <FirstSectionPicture>
           <Image src={dentistaBanner} width="602" height="924" alt="dentist"/>
+          <PictureParralaxSolid left={1} top={20} size={493}/>
+          <PictureParralaxIcon left={74} top={28} size={136}/>
+          <PictureParralaxIcon left={9} top={25} size={81}/>
         </FirstSectionPicture>
         <FirstSectionAside>
           <MainTitle>
