@@ -34,9 +34,7 @@ const FirstSectionAside = styled.aside`
   row-gap: 40px;
 `;
 
-const FirstSectionImage = styled.img`
-  height: 924px;
-  width: 602px;
+const FirstSectionPicture = styled.picture`
   justify-self: end;
   align-self: center;
 `;
@@ -62,7 +60,7 @@ export {
   MainPage,
   FirstSection,
   FirstSectionAside,
-  FirstSectionImage,
+  FirstSectionPicture,
   MainTitle,
   SecondaryPage,
 };

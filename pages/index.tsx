@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import React from 'react';
-import Header from '../components/header';
-import {
-  FirstSection, FirstSectionAside, FirstSectionImage, MainPage, MainTitle, Text,
-} from '../styles/pages/index/style';
+import Image from 'next/image';
 import dentistaBanner from '../assets/dentista_banner.png';
+import Header from '../components/header';
 import { AccentButton } from '../styles/template/button/style';
 import Span from '../styles/template/shared/style';
 import theme from '../styles/theme';
+import {
+  MainPage, FirstSection, FirstSectionPicture, FirstSectionAside, MainTitle, Text,
+} from '../styles/pages/index/style';
 
 const LandingPage: React.FC = () => (
   <>
@@ -18,7 +19,9 @@ const LandingPage: React.FC = () => (
     <MainPage>
       <Header />
       <FirstSection>
-        <FirstSectionImage src={dentistaBanner} width="602" height="924" alt="dentist"/>
+        <FirstSectionPicture>
+          <Image src={dentistaBanner} width="602" height="924" alt="dentist"/>
+        </FirstSectionPicture>
         <FirstSectionAside>
           <MainTitle>
             <Span color={theme.colors.primary.default}>Lorem</Span> Ipsum is simply dummy
