@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import mediaSizes from '../../styles/utils/media-sizes';
+import MEDIA_SIZES from '../../styles/utils/media-sizes';
 
 const HeaderContainer = styled.header`
   display: grid;
   grid-template-columns: max-content 1fr;
   padding: 3rem 5rem;
 
-  @media(max-width: ${mediaSizes.large}px) {
+  @media(max-width: ${MEDIA_SIZES.large}px) {
     grid-template-columns: max-content;
     justify-content: center;
   }
@@ -18,7 +18,7 @@ const LogoTipo = styled.h1`
   font-size: 30px;
   line-height: 45px;
 
-  @media(max-width: ${mediaSizes.large}px) {
+  @media(max-width: ${MEDIA_SIZES.large}px) {
     display: none;
   }
 `;
@@ -43,7 +43,7 @@ const Navigation = styled.nav`
   align-self: center;
   align-content: start;
 
-  @media(max-width: ${mediaSizes.large}px) {
+  @media(max-width: ${MEDIA_SIZES.large}px) {
     grid-column: 1/2;
   }
 `;
