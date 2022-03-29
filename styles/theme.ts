@@ -17,7 +17,7 @@ const theme: Theme = {
   colors: {
     primary: {
       default: '#7061EE',
-      light: '#8f84f1',
+      light: '#8073F0',
       dark: '#7163ed',
       contrast: '#ffffff',
     },
