@@ -1,14 +1,16 @@
-version: "3"
+version: '3'
 
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: nextjs
+    container_name: nextjs_dentist
     restart: always
     volumes:
       - ./:/usr/src/app
+    expose:
+      - 3000
     ports:
-      - 3000:3000
-    command: npm run dev
+      - '3000:3000'
+    command: npm run start
