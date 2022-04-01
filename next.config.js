@@ -1,4 +1,12 @@
 const nextConfig = {
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+    }
+  },
   i18n: {
     locales: ["pt-br"],
     defaultLocale: "pt-br",
