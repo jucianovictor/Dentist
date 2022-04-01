@@ -23,6 +23,6 @@ const IconAccentButton = styled(IconButtonBase)`
 `;
 
 export {
-  IconButtonBase,
-  IconAccentButton,
+	IconButtonBase,
+	IconAccentButton,
 };

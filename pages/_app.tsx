@@ -9,10 +9,10 @@ import './_fonts.css';
 import LandingPage from '.';
 
 const App: React.FC<AppProps> = () => (
-  <ThemeProvider theme={theme}>
-    <LandingPage />
-    <GlobalStyle />
-  </ThemeProvider>
+	<ThemeProvider theme={theme}>
+		<LandingPage />
+		<GlobalStyle />
+	</ThemeProvider>
 );
 
 export default App;

@@ -7,15 +7,15 @@ const LabbeledBaseInput = styled(BaseInput)`
 `;
 
 const TextInput = styled(LabbeledBaseInput).attrs({
-  type: 'text',
+	type: 'text',
 })``;
 
 const PasswordInput = styled(LabbeledBaseInput).attrs({
-  type: 'password',
+	type: 'password',
 })``;
 
 const EmailInput = styled(LabbeledBaseInput).attrs({
-  type: 'email',
+	type: 'email',
 })``;
 
 const Label = styled.label`
@@ -25,8 +25,8 @@ const Label = styled.label`
 `;
 
 export {
-  Label,
-  TextInput,
-  EmailInput,
-  PasswordInput,
+	Label,
+	TextInput,
+	EmailInput,
+	PasswordInput,
 };

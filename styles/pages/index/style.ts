@@ -107,13 +107,13 @@ const SecondaryPage = styled.section`
 `;
 
 export {
-  Text,
-  MainPage,
-  FirstSection,
-  FirstSectionAside,
-  FirstSectionPicture,
-  PictureParralaxIcon,
-  PictureParralaxSolid,
-  MainTitle,
-  SecondaryPage,
+	Text,
+	MainPage,
+	FirstSection,
+	FirstSectionAside,
+	FirstSectionPicture,
+	PictureParralaxIcon,
+	PictureParralaxSolid,
+	MainTitle,
+	SecondaryPage,
 };

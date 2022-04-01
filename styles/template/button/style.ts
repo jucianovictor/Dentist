@@ -22,6 +22,6 @@ const AccentButton = styled(ButtonBase)`
 `;
 
 export {
-  ButtonBase,
-  AccentButton,
+	ButtonBase,
+	AccentButton,
 };

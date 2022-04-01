@@ -49,8 +49,8 @@ const Navigation = styled.nav`
 `;
 
 export {
-  Link,
-  HeaderContainer,
-  Navigation,
-  LogoTipo,
+	Link,
+	HeaderContainer,
+	Navigation,
+	LogoTipo,
 };
