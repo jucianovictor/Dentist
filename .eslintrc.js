@@ -22,6 +22,9 @@ module.exports = {
 		sourceType: 'module',
 		warnOnUnsupportedTypeScriptVersion: false,
 	},
+	globals: {
+		React: 'readonly',
+	},
 	settings: {
 		react: {
 			version: 'detect',
@@ -29,6 +32,11 @@ module.exports = {
 	},
 	plugins: ['react', '@typescript-eslint'],
 	rules: {
+		'react/display-name': 'off',
+		'react/prop-types': 'off',
+		'@typescript-eslint/no-empty-interface': 'off',
+		semi: "off",
+  	"@typescript-eslint/semi": ["error"],
 		'space-before-function-paren': ['error', 'always'],
 		'arrow-parens': 'off',
 		'import/extensions': ['error', 'never'],
@@ -39,8 +47,6 @@ module.exports = {
 		],
 		'prefer-const': 'error',
 		quotes: ['error', 'single'],
-		semi: ['error', 'always'],
-		'react/display-name': 'off',
-		'react/prop-types': 'off',
+		'no-extra-semi': 'error',
 	},
 };
