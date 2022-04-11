@@ -31,7 +31,7 @@ const theme: Theme = {
 			default: '#FF5B83',
 			dark: '#ff5c83',
 			light: '#ff868c',
-			contrast: '#fff',
+			contrast: '#F5F4FF',
 		},
 	},
 };
