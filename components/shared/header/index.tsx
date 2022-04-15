@@ -3,18 +3,6 @@ import { useTheme } from 'styled-components';
 import Span from '../../../styles/template/span/span';
 import { HeaderContainer, Link, LogoTipo, Navigation } from './style';
 
-interface ILink {
-	label: string;
-	href: string;
-}
-
-const links: ILink[] = [
-	{ label: 'Sobre mim', href: '#' },
-	{ label: 'Tratamentos', href: '#' },
-	{ label: 'Clínica', href: '#' },
-	{ label: 'Atendimento', href: '#' },
-];
-
 const Header: React.FC = () => {
 	const theme = useTheme();
 	return (
@@ -24,11 +12,10 @@ const Header: React.FC = () => {
 				<Span color={theme.colors.secondary.dark}> Rossi</Span>
 			</LogoTipo>
 			<Navigation>
-				{links.map((link, key) => (
-					<Link key={key} href={link.href}>
-						{link.label}
-					</Link>
-				))}
+				<Link href="#">Sobre mim</Link>
+				<Link href="#treatments">Tratamentos</Link>
+				<Link href="#">Clínica</Link>
+				<Link href="#">Atendimento</Link>
 			</Navigation>
 		</HeaderContainer>
 	);

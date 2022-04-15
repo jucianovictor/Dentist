@@ -29,12 +29,9 @@ const Link = styled.a`
 `;
 
 const Navigation = styled.nav`
-	font-family: 'Poppins';
-	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 27px;
-	height: 40px;
 	width: 100%;
 	grid-column: 3/4;
 	display: grid;
