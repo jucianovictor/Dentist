@@ -39,6 +39,7 @@ const Card = styled.article`
 	box-shadow: 0px 10px 100px 20px rgb(74 63 151 / 10%);
 	border-radius: 40px;
 	padding: 17px;
+	position: relative;
 `;
 
 const CardImage = styled(Image)`
@@ -54,10 +55,26 @@ const CardFigure = styled.figure`
 	position: relative;
 `;
 
-const CardTitle = styled.sub`
+const CardTextContainer = styled.div`
+	display: grid;
+	row-gap: 10px;
+	justify-self: start;
+	bottom: 45px;
+	left: 50px;
+	position: absolute;
+`;
+
+const CardTitle = styled.h1`
 	font-weight: 700;
 	font-size: 28px;
 	line-height: 25px;
+`;
+
+const CardSubTitle = styled.h2`
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 28px;
+	color: ${props => props.theme.colors.secondary.dark};
 `;
 
 export {
@@ -67,5 +84,7 @@ export {
 	Card,
 	CardFigure,
 	CardImage,
+	CardTextContainer,
 	CardTitle,
+	CardSubTitle,
 };

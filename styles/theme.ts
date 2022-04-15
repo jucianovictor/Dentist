@@ -13,7 +13,7 @@ type Theme = {
 	};
 };
 
-const theme: Theme = {
+const THEME: Theme = {
 	colors: {
 		primary: {
 			default: '#7061EE',
@@ -36,4 +36,4 @@ const theme: Theme = {
 	},
 };
 
-export default theme;
+export default THEME;

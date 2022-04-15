@@ -22,7 +22,7 @@ const LandingPage: React.FC<Props> = ({ cards }: Props) => {
 			<PrimaryContent>
 				<Header />
 				<Main theme={theme} />
-				<Treatments cards={cards} />
+				<Treatments {...{ cards, theme }} />
 			</PrimaryContent>
 		</>
 	);
