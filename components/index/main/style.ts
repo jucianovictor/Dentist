@@ -85,8 +85,7 @@ const PictureParralaxContent = styled(PictureParralax)`
 `;
 
 const PictureParralaxIcon = styled(PictureParralaxContent)`
-	animation: ${props => upDownAnimation(props.top, 10, '%')} 4s infinite
-		ease-in-out;
+	animation: ${upDownAnimation(0, 100, '%')} 4s infinite ease-in-out;
 `;
 
 const Title = styled.h1`
