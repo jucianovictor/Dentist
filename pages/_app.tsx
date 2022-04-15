@@ -1,16 +1,14 @@
-import React from 'react';
 import { AppProps } from 'next/app';
+import React from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import theme from '../styles/theme';
 import GlobalStyle from '../styles/global';
-import './_fonts.css';
+import theme from '../styles/theme';
+import '../styles/_fonts.css';
 
-import LandingPage from '.';
-
-const App: React.FC<AppProps> = () => (
+const App: React.FC<AppProps> = ({ Component, pageProps }) => (
 	<ThemeProvider theme={theme}>
-		<LandingPage />
+		<Component {...pageProps} />
 		<GlobalStyle />
 	</ThemeProvider>
 );
