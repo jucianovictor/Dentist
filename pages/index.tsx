@@ -1,24 +1,17 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import React from 'react';
 import { useTheme } from 'styled-components';
-import Header from '../components/header';
-import IconButton from '../components/icon-button';
-import WhatsappIcon from '../components/whatsapp-icon';
-import dentistaBanner from '../public/images/dentista_banner.png';
-import {
-	FirstSection,
-	FirstSectionAside,
-	FirstSectionPicture,
-	MainPage,
-	MainTitle,
-	PictureParralaxIcon,
-	PictureParralaxSolid,
-	Text,
-} from '../styles/pages/index/style';
-import Span from '../styles/template/shared/span';
+import Main from '../components/index/main';
+import { PrimaryContent } from '../components/index/style';
+import Treatments, { Card } from '../components/index/treatments';
+import Header from '../components/shared/header';
 
-const LandingPage: React.FC = () => {
+interface Props {
+	cards: Card[];
+}
+
+const LandingPage: React.FC<Props> = ({ cards }: Props) => {
 	const theme = useTheme();
 	return (
 		<>
@@ -26,45 +19,52 @@ const LandingPage: React.FC = () => {
 				<title>Aline Rossi</title>
 				<meta name="description" content="Landing Page"></meta>
 			</Head>
-			<MainPage>
+			<PrimaryContent>
 				<Header />
-				<FirstSection>
-					<FirstSectionPicture>
-						<Image
-							src={dentistaBanner}
-							width="602"
-							height="924"
-							alt="dentist"
-						/>
-						<PictureParralaxSolid left={1} top={20} size={493} />
-						<PictureParralaxIcon left={74} top={28} size={136} />
-						<PictureParralaxIcon left={9} top={25} size={81} />
-					</FirstSectionPicture>
-					<FirstSectionAside>
-						<MainTitle>
-							<Span color={theme.colors.primary.default}>Lorem</Span> Ipsum is
-							simply dummy
-							<Span color={theme.colors.primary.default}>.</Span>
-						</MainTitle>
-						<Text>
-							is simply dummy text of the printing and typesetting industry.
-							Lorem Ipsum has been the industry&apos;s standard dummy text ever
-							since the 1500s,
-						</Text>
-						<IconButton
-							themeColor={theme.colors.accent}
-							icon={{
-								component: WhatsappIcon,
-								props: {
-									color: theme.colors.accent.default,
-								},
-							}}
-						/>
-					</FirstSectionAside>
-				</FirstSection>
-			</MainPage>
+				<Main theme={theme} />
+				<Treatments cards={cards} />
+			</PrimaryContent>
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+	const cards = [
+		{
+			img: null,
+			title: 'Check-up Odontológico',
+			subtitle: 'Subtítulo',
+		},
+		{
+			img: null,
+			title: 'Clareamento Dentário',
+			subtitle: 'Subtítulo',
+		},
+		{
+			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
+			title: 'Exodontias',
+			subtitle: 'Subtítulo',
+		},
+		{
+			img: null,
+			title: 'Check-up Odontológico',
+			subtitle: 'Subtítulo',
+		},
+		{
+			img: null,
+			title: 'Clareamento Dentário',
+			subtitle: 'Subtítulo',
+		},
+		{
+			img: null,
+			title: 'Exodontias',
+			subtitle: 'Subtítulo',
+		},
+	];
+
+	return {
+		props: { cards },
+	};
 };
 
 export default LandingPage;

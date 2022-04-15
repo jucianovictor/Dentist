@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import ButtonBase from '../../styles/template/button-base/style';
-import { Color } from './../../styles/theme';
+import ButtonBase from '../../../styles/template/button-base/style';
+import { Color } from '../../../styles/theme';
 
 const IconButtonContainer = styled.div<{
 	themeColor: Color;

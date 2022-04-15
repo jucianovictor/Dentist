@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MEDIA_SIZES from '../../styles/utils/media-sizes';
+import MEDIA_SIZES from '../../../styles/utils/media-sizes';
 
 const HeaderContainer = styled.header`
 	display: grid;
@@ -25,7 +25,7 @@ const LogoTipo = styled.h1`
 
 const Link = styled.a`
 	text-decoration: none;
-	color: ${(props) => props.theme.colors.secondary.default};
+	color: ${props => props.theme.colors.secondary.default};
 `;
 
 const Navigation = styled.nav`

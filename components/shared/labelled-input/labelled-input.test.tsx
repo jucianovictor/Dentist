@@ -1,7 +1,6 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+import GlobalStyleAndAllProviders from '../../../test/utils';
 import LabelledInput, { LabelledInputProps } from './index';
-import GlobalStyleAndAllProviders from '../../test/utils';
 
 describe('<LabelledInput />', () => {
 	it('should hold the props from text type', () => {
@@ -13,8 +12,8 @@ describe('<LabelledInput />', () => {
 
 		render(
 			<GlobalStyleAndAllProviders>
-				<LabelledInput { ...props }/>
-			</GlobalStyleAndAllProviders>,
+				<LabelledInput {...props} />
+			</GlobalStyleAndAllProviders>
 		);
 		const label = screen.getByText(props.label);
 		const input = screen.getByLabelText(props.label);
@@ -33,8 +32,8 @@ describe('<LabelledInput />', () => {
 
 		render(
 			<GlobalStyleAndAllProviders>
-				<LabelledInput { ...props }/>
-			</GlobalStyleAndAllProviders>,
+				<LabelledInput {...props} />
+			</GlobalStyleAndAllProviders>
 		);
 		const label = screen.getByText(props.label);
 		const input = screen.getByLabelText(props.label);
@@ -53,8 +52,8 @@ describe('<LabelledInput />', () => {
 
 		render(
 			<GlobalStyleAndAllProviders>
-				<LabelledInput { ...props }/>
-			</GlobalStyleAndAllProviders>,
+				<LabelledInput {...props} />
+			</GlobalStyleAndAllProviders>
 		);
 		const label = screen.getByText(props.label);
 		const input = screen.getByLabelText(props.label);

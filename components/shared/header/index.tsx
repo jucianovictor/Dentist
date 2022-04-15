@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
-import Span from '../../styles/template/shared/span';
+import Span from '../../../styles/template/span/span';
 import { HeaderContainer, Link, LogoTipo, Navigation } from './style';
 
 interface ILink {

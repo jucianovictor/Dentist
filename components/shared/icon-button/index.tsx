@@ -1,6 +1,6 @@
 import React from 'react';
-import IconProps from '../../styles/template/shared/icon';
-import { Color } from '../../styles/theme';
+import { Color } from '../../../styles/theme';
+import IconProps from '../icon';
 import { IconButtonContainer, IconContainer } from './style';
 
 interface Props {
