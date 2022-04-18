@@ -31,32 +31,32 @@ const LandingPage: React.FC<Props> = ({ cards }: Props) => {
 export const getStaticProps: GetStaticProps = async () => {
 	const cards = [
 		{
-			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
+			img: null,
 			title: 'Check-up Odontológico',
 			subtitle: 'Odontograma',
 		},
 		{
-			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
+			img: null,
 			title: 'Clareamento Dentário',
 			subtitle: 'Clareamento',
 		},
 		{
-			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
+			img: null,
 			title: 'Exodontias',
 			subtitle: 'Subtítulo',
 		},
 		{
-			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
+			img: null,
 			title: 'Check-up Odontológico',
 			subtitle: 'Subtítulo',
 		},
 		{
-			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
+			img: null,
 			title: 'Clareamento Dentário',
 			subtitle: 'Subtítulo',
 		},
 		{
-			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
+			img: null,
 			title: 'Exodontias',
 			subtitle: 'Subtítulo',
 		},

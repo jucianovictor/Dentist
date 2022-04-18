@@ -20,7 +20,13 @@ interface Props {
 const Main: React.FC<Props> = ({ theme }: Props) => (
 	<Container>
 		<Picture>
-			<Image src={dentistaBanner} width="602" height="924" alt="dentist" />
+			<Image
+				src={dentistaBanner}
+				width="602"
+				height="924"
+				priority={true}
+				alt="dentist"
+			/>
 			<PictureParralaxSolid left={1} top={20} size={493} />
 			<PictureParralaxIcon left={74} top={28} size={136} />
 			<PictureParralaxIcon left={9} top={25} size={81} />
