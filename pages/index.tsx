@@ -31,14 +31,14 @@ const LandingPage: React.FC<Props> = ({ cards }: Props) => {
 export const getStaticProps: GetStaticProps = async () => {
 	const cards = [
 		{
-			img: null,
+			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
 			title: 'Check-up Odontológico',
-			subtitle: 'Subtítulo',
+			subtitle: 'Odontograma',
 		},
 		{
-			img: null,
+			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
 			title: 'Clareamento Dentário',
-			subtitle: 'Subtítulo',
+			subtitle: 'Clareamento',
 		},
 		{
 			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
@@ -46,17 +46,17 @@ export const getStaticProps: GetStaticProps = async () => {
 			subtitle: 'Subtítulo',
 		},
 		{
-			img: null,
+			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
 			title: 'Check-up Odontológico',
 			subtitle: 'Subtítulo',
 		},
 		{
-			img: null,
+			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
 			title: 'Clareamento Dentário',
 			subtitle: 'Subtítulo',
 		},
 		{
-			img: null,
+			img: 'https://i.ibb.co/BqDfD26/image-4-1.png',
 			title: 'Exodontias',
 			subtitle: 'Subtítulo',
 		},

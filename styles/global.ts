@@ -11,8 +11,7 @@ export default createGlobalStyle`
   html {
     width: 100%;
     height: 100%;
-    min-width: max-content;
-    max-height: max-content;
+		min-width: fit-content;
   }
 
   body {

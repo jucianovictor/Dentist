@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
+const cardWidth = 317;
+const cardContainerColumnGap = 62;
+
 const Title = styled.h1`
 	font-weight: 400;
 	font-size: 22px;
 	line-height: 75px;
 	letter-spacing: 0.5em;
+	transform: translate(0.5em, 0px);
 	color: ${props => props.theme.colors.primary.default};
 `;
 
@@ -19,18 +23,21 @@ const Container = styled.section`
 
 const CardsContainer = styled.section`
 	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
+	width: 100%;
+	min-width: ${cardWidth}px;
+	max-width: ${cardWidth * 3 + 2 * cardContainerColumnGap}px;
+	grid-auto-rows: min-content;
+	grid-template-columns: repeat(auto-fit, ${cardWidth}px);
 	justify-items: center;
+	justify-content: center;
 	row-gap: 75px;
-	column-gap: 62px;
+	column-gap: ${cardContainerColumnGap}px;
 	height: min-content;
-	width: min-content;
 	padding: 42px 0;
 `;
 
 const Card = styled.article`
-	width: 317px;
+	width: ${cardWidth}px;
 	height: 465.9px;
 	display: grid;
 	grid-template-rows: min-content 1fr;

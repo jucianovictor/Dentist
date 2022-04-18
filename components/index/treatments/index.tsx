@@ -40,33 +40,31 @@ const changeWordsColor = (text: string, theme: DefaultTheme) => {
 	));
 };
 
-const Treatments: React.FC<Props> = ({ theme, cards }: Props) => {
-	return (
-		<Container>
-			<Title>Nossos Tratamentos</Title>
-			<CardsContainer>
-				{cards?.map((card, key) => (
-					<Card key={key}>
-						<CardFigure>
-							{card.img && (
-								<CardImage
-									src={card.img}
-									alt={card.title}
-									layout={'fill'}
-									objectFit={'fill'}
-									quality={100}
-								/>
-							)}
-						</CardFigure>
-						<CardTextContainer>
-							<CardTitle>{changeWordsColor(card.title, theme)}</CardTitle>
-							<CardSubTitle>{card.subtitle}</CardSubTitle>
-						</CardTextContainer>
-					</Card>
-				))}
-			</CardsContainer>
-		</Container>
-	);
-};
+const Treatments: React.FC<Props> = ({ theme, cards }: Props) => (
+	<Container>
+		<Title>Nossos Tratamentos</Title>
+		<CardsContainer>
+			{cards?.map((card, key) => (
+				<Card key={key}>
+					<CardFigure>
+						{card.img && (
+							<CardImage
+								src={card.img}
+								alt={card.title}
+								layout={'fill'}
+								objectFit={'fill'}
+								quality={100}
+							/>
+						)}
+					</CardFigure>
+					<CardTextContainer>
+						<CardTitle>{changeWordsColor(card.title, theme)}</CardTitle>
+						<CardSubTitle>{card.subtitle}</CardSubTitle>
+					</CardTextContainer>
+				</Card>
+			))}
+		</CardsContainer>
+	</Container>
+);
 
 export default Treatments;

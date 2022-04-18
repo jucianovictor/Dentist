@@ -8,12 +8,11 @@ const Container = styled.main`
 	grid-template-rows: 100%;
 	height: max-content;
 	width: 100%;
-	padding: 0 50px;
+	min-width: max-content;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 28px;
-	padding: 0px 15px 0px 0px;
 	color: ${props => props.theme.colors.secondary.default};
 
 	@media (max-width: ${MEDIA_SIZES.extraLarge}px) {
@@ -28,6 +27,7 @@ const Aside = styled.aside`
 	align-self: center;
 	display: grid;
 	row-gap: 40px;
+	padding: 0 50px;
 
 	@media (max-width: ${MEDIA_SIZES.extraLarge}px) {
 		grid-column: 1;
