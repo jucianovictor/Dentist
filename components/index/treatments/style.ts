@@ -4,6 +4,15 @@ import styled from 'styled-components';
 const cardWidth = 317;
 const cardContainerColumnGap = 62;
 
+const Container = styled.section`
+	width: 100%;
+	height: min-content;
+	display: grid;
+	place-items: center;
+	grid-template-rows: min-content 1fr min-content;
+	padding: 60px 0;
+`;
+
 const Title = styled.h1`
 	font-weight: 400;
 	font-size: 22px;
@@ -11,14 +20,6 @@ const Title = styled.h1`
 	letter-spacing: 0.5em;
 	transform: translate(0.5em, 0px);
 	color: ${props => props.theme.colors.primary.default};
-`;
-
-const Container = styled.section`
-	width: 100%;
-	height: min-content;
-	display: grid;
-	place-items: center;
-	grid-template-rows: min-content 1fr;
 `;
 
 const CardsContainer = styled.section`
@@ -33,7 +34,7 @@ const CardsContainer = styled.section`
 	row-gap: 75px;
 	column-gap: ${cardContainerColumnGap}px;
 	height: min-content;
-	padding: 42px 0;
+	padding: 60px 0 120px 0px;
 `;
 
 const Card = styled.article`

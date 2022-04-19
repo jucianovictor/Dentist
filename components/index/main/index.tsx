@@ -2,8 +2,7 @@ import Image from 'next/image';
 import { DefaultTheme } from 'styled-components';
 import dentistaBanner from '../../../public/images/dentista_banner.png';
 import Span from '../../../styles/template/span/span';
-import IconButton from '../../shared/icon-button';
-import WhatsappIcon from '../../shared/whatsapp-icon';
+import Button from '../../shared/button';
 import {
 	Aside,
 	Container,
@@ -39,15 +38,7 @@ const Main: React.FC<Props> = ({ theme }: Props) => (
 			</Title>
 			is simply dummy text of the printing and typesetting industry. Lorem Ipsum
 			has been the industry&apos;s standard dummy text ever since the 1500s,
-			<IconButton
-				themeColor={theme.colors.accent}
-				icon={{
-					component: WhatsappIcon,
-					props: {
-						color: theme.colors.accent.default,
-					},
-				}}
-			/>
+			<Button text="Marque sua consulta" themeColor={theme.colors.accent} />
 		</Aside>
 	</Container>
 );
