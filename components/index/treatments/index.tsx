@@ -1,6 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 import Span from '../../../styles/template/span/span';
 import THEME from '../../../styles/theme';
+import Button from '../../shared/button';
 import {
 	Card,
 	CardFigure,
@@ -64,6 +65,14 @@ const Treatments: React.FC<Props> = ({ theme, cards }: Props) => (
 				</Card>
 			))}
 		</CardsContainer>
+		<Button
+			{...{
+				text: 'Marque sua consulta',
+				width: '373px',
+				height: '66px',
+				themeColor: theme.colors.accent,
+			}}
+		/>
 	</Container>
 );
 

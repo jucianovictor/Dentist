@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import ButtonBase from '../../../styles/template/button-base/style';
 import { Color } from '../../../styles/theme';
 
-const IconButtonContainer = styled.div<{
+const ButtonContainer = styled.div<{
 	themeColor: Color;
 	width: string;
 	height: string;
+	hasIcon: boolean;
 }>`
 	${ButtonBase};
 	width: ${props => props.width};
@@ -19,7 +20,7 @@ const IconButtonContainer = styled.div<{
 	);
 	box-shadow: 0px 10px 50px 3px rgba(255, 6, 6, 0.25);
 	display: grid;
-	grid-template-columns: 60px 1fr;
+	grid-template-columns: ${props => props.hasIcon && '60px '} 1fr;
 	justify-items: center;
 	align-items: center;
 `;
@@ -36,4 +37,4 @@ const IconContainer = styled.div<{ themeColor: Color }>`
 	place-content: center;
 `;
 
-export { IconButtonContainer, IconContainer };
+export { ButtonContainer, IconContainer };
