@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import { useTheme } from 'styled-components';
+import AboutMe from '../components/index/about-me';
 import Main from '../components/index/main';
 import { PrimaryContent } from '../components/index/style';
 import Treatments, { Card } from '../components/index/treatments';
@@ -23,6 +24,7 @@ const LandingPage: React.FC<Props> = ({ cards }: Props) => {
 				<Header />
 				<Main theme={theme} />
 				<Treatments {...{ cards, theme }} />
+				<AboutMe theme={theme} />
 			</PrimaryContent>
 		</>
 	);
