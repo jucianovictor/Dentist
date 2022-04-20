@@ -1,4 +1,4 @@
-const MEDIA_SIZES = {
+const BREAKPOINTS = {
 	extraSmall: 320,
 	small: 520,
 	medium: 768,
@@ -9,4 +9,4 @@ const MEDIA_SIZES = {
 	FourK: 3840,
 };
 
-export default MEDIA_SIZES;
+export default BREAKPOINTS;
