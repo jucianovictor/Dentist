@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MEDIA_SIZES from '../../../styles/utils/media-sizes';
+import MEDIA_SIZES from '../../../styles/utils/breakpoints';
 
 const HeaderContainer = styled.header`
 	display: grid;
