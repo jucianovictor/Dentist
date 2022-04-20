@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import upDownAnimation from '../../../styles/animations/up-down';
-import MEDIA_SIZES from '../../../styles/utils/media-sizes';
+import BREAKPOINTS from '../../../styles/utils/breakpoints';
 
 const Container = styled.main`
 	display: grid;
@@ -15,7 +15,7 @@ const Container = styled.main`
 	line-height: 28px;
 	color: ${props => props.theme.colors.secondary.default};
 
-	@media (max-width: ${MEDIA_SIZES.extraLarge}px) {
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, max-content) 50px;
 	}
@@ -29,7 +29,7 @@ const Aside = styled.aside`
 	row-gap: 40px;
 	padding: 0 50px;
 
-	@media (max-width: ${MEDIA_SIZES.extraLarge}px) {
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
 		grid-column: 1;
 		justify-self: center;
 		align-self: start;
@@ -47,7 +47,7 @@ const Picture = styled.picture`
 	align-self: center;
 	position: relative;
 
-	@media (max-width: ${MEDIA_SIZES.extraLarge}px) {
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
 		justify-self: center;
 	}
 `;
