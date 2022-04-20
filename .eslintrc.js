@@ -39,7 +39,7 @@ module.exports = {
 		'@typescript-eslint/semi': ['error'],
 		'arrow-parens': 'off',
 		'import/extensions': ['error', 'never'],
-		indent: ['error', 'tab'],
+		indent: 'off',
 		'linebreak-style': [
 			'error',
 			process.platform === 'win32' ? 'windows' : 'unix',
