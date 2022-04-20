@@ -3,6 +3,7 @@ import { DefaultTheme } from 'styled-components';
 import dentistaBanner from '../../../public/images/dentista_banner.png';
 import Span from '../../../styles/template/span/span';
 import Button from '../../shared/button';
+import WhatsappIcon from '../../shared/whatsapp-icon';
 import {
 	Aside,
 	Container,
@@ -32,13 +33,24 @@ const Main: React.FC<Props> = ({ theme }: Props) => (
 		</Picture>
 		<Aside>
 			<Title>
-				<Span color={theme.colors.primary.default}>Lorem</Span> Ipsum is simply
-				dummy
-				<Span color={theme.colors.primary.default}>.</Span>
+				<Span color={theme.colors.primary.default}>O melhor</Span> para os seus
+				dentes
+				<Span color={theme.colors.primary.default}>!</Span>
 			</Title>
-			is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-			has been the industry&apos;s standard dummy text ever since the 1500s,
-			<Button text="Marque sua consulta" themeColor={theme.colors.accent} />
+			Uma das 20 clínicas odontológicas mais recomendadas de Fortaleza, com
+			especialização em prótese dentária e recuperação do seu sorriso.
+			<Button
+				{...{
+					text: 'Marque sua consulta',
+					themeColor: theme.colors.accent,
+					icon: {
+						component: WhatsappIcon,
+						props: {
+							color: theme.colors.accent.default,
+						},
+					},
+				}}
+			/>
 		</Aside>
 	</Container>
 );
