@@ -10,6 +10,7 @@ const PrimaryContent = styled.div`
 		rgba(54, 34, 255, 0.12) 0.39%,
 		rgba(245, 244, 255, 0) 60.82%
 	);
+	place-content: center;
 `;
 
 const SecondaryContent = styled.section`
