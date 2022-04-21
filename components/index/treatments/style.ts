@@ -44,7 +44,7 @@ const Card = styled.article`
 	grid-template-rows: min-content 1fr;
 	place-items: center;
 	background: #ffffff;
-	box-shadow: 0px 10px 100px 20px rgb(74 63 151 / 10%);
+	box-shadow: 0px 35px 36px 11px rgb(74 63 151 / 10%);
 	border-radius: 40px;
 	padding: 17px;
 	position: relative;
