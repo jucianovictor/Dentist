@@ -7,12 +7,13 @@ const Container = styled.section`
 	height: min-content;
 	display: grid;
 	place-items: center;
-	grid-template-columns: minmax(421px, 650px) minmax(600px, 829px);
+	grid-template-columns: minmax(421px, 650px) minmax(585px, 829px);
 	justify-content: center;
+	margin-bottom: 80px;
 
 	@media (max-width: ${BREAKPOINTS.large}px) {
 		grid-template-columns: minmax(min-content, 829px);
-		grid-template-rows: 670px 1fr;
+		grid-template-rows: 740px 1fr;
 	}
 `;
 
@@ -45,6 +46,7 @@ const Article = styled.article`
 `;
 
 const ArticleSpanTitle = styled(Span)`
+	font-style: normal;
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 60px;

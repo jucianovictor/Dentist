@@ -6,19 +6,20 @@ const PrimaryContent = styled.div`
 	display: grid;
 	grid-auto-rows: min-content;
 	background: linear-gradient(
-		131.08deg,
-		rgba(54, 34, 255, 0.12) 0.39%,
-		rgba(245, 244, 255, 0) 60.82%
+		54.93deg,
+		rgba(112, 97, 238, 0.12) -3.24%,
+		rgba(196, 196, 196, 0) 34.83%
 	);
 	place-content: center;
 `;
 
-const SecondaryContent = styled.section`
-	width: 100vw;
-	height: 100vh;
+const SecondaryContent = styled.div`
+	width: 100%;
+	height: max-content;
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-auto-flow: column;
+	background-color: #fff;
 `;
 
 export { PrimaryContent, SecondaryContent };

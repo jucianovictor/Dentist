@@ -22,8 +22,9 @@ const Main: React.FC<Props> = ({ theme }: Props) => (
 		<Picture>
 			<Image
 				src={dentistaBanner}
-				width="602"
-				height="924"
+				width={602}
+				height={924}
+				layout={'fixed'}
 				priority={true}
 				alt="dentist"
 			/>
