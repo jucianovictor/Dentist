@@ -11,7 +11,8 @@
 				"pattern": "started server on .+, url: (https?://.+)",
 				"uriFormat": "%s",
 				"action": "debugWithEdge"
-			}
+			},
+			"webRoot": "${workspaceFolder}"
 		}
 	]
 }
