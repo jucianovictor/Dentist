@@ -42,39 +42,51 @@ const Pictures = styled.aside`
 const Picture = styled.picture`
 	position: relative;
 
+	&::before {
+		content: '';
+		position: absolute;
+		background-color: ${({ theme }) => theme.colors.primary.default}b5;
+		border-radius: 20px;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		z-index: 2;
+		transition: opacity 0.6s ease-in-out;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		background: ${({ theme }) => theme.colors.primary.contrast};
+		width: 100%;
+		height: 100%;
+		transform: translate(0%, -100%);
+		clip-path: polygon(
+			30% 49%,
+			49% 49%,
+			49% 30%,
+			51% 30%,
+			51% 49%,
+			70% 49%,
+			70% 51%,
+			51% 51%,
+			51% 70%,
+			49% 70%,
+			49% 51%,
+			30% 51%
+		);
+		z-index: 3;
+		opacity: 0;
+		transition: opacity 0.6s ease-in-out;
+	}
+
 	&:hover {
 		&::before {
-			content: '';
-			position: absolute;
-			background-color: ${({ theme }) => theme.colors.primary.default}b5;
-			width: 100%;
-			height: 100%;
-			border-radius: 20px;
-			z-index: 2;
+			opacity: 1;
 		}
 
 		&::after {
-			content: '';
-			position: absolute;
-			background: ${({ theme }) => theme.colors.primary.contrast};
-			width: 100%;
-			height: 100%;
-			transform: translate(0%, -100%);
-			clip-path: polygon(
-				30% 49%,
-				49% 49%,
-				49% 30%,
-				51% 30%,
-				51% 49%,
-				70% 49%,
-				70% 51%,
-				51% 51%,
-				51% 70%,
-				49% 70%,
-				49% 51%,
-				30% 51%
-			);
-			z-index: 3;
+			opacity: 1;
 		}
 	}
 `;
