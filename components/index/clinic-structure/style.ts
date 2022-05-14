@@ -39,6 +39,46 @@ const Pictures = styled.aside`
 	}
 `;
 
+const Picture = styled.picture`
+	position: relative;
+
+	&:hover {
+		&::before {
+			content: '';
+			position: absolute;
+			background-color: ${({ theme }) => theme.colors.primary.default}b5;
+			width: 100%;
+			height: 100%;
+			border-radius: 20px;
+			z-index: 2;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			background: ${({ theme }) => theme.colors.primary.contrast};
+			width: 100%;
+			height: 100%;
+			transform: translate(0%, -100%);
+			clip-path: polygon(
+				30% 49%,
+				49% 49%,
+				49% 30%,
+				51% 30%,
+				51% 49%,
+				70% 49%,
+				70% 51%,
+				51% 51%,
+				51% 70%,
+				49% 70%,
+				49% 51%,
+				30% 51%
+			);
+			z-index: 3;
+		}
+	}
+`;
+
 const Img = styled(Image)`
 	border-radius: 20px;
 `;
@@ -52,4 +92,4 @@ const Article = styled.article`
 	color: ${props => props.theme.colors.secondary.dark};
 `;
 
-export { Container, Pictures, Img, Article, ArticleSpanTitle };
+export { Container, Pictures, Picture, Img, Article, ArticleSpanTitle };

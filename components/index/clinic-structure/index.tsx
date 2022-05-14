@@ -1,7 +1,14 @@
 import React from 'react';
 import { DefaultTheme } from 'styled-components';
 import { IImage } from '../interfaces';
-import { Article, ArticleSpanTitle, Container, Img, Pictures } from './style';
+import {
+	Article,
+	ArticleSpanTitle,
+	Container,
+	Img,
+	Picture,
+	Pictures,
+} from './style';
 
 interface Props {
 	theme: DefaultTheme;
@@ -23,14 +30,15 @@ const ClinicStructure: React.FC<Props> = ({ theme, pictures }: Props) => (
 		</Article>
 		<Pictures>
 			{pictures?.map(({ src, title }, key) => (
-				<Img
-					key={key}
-					src={src}
-					alt={title}
-					width={324}
-					height={324}
-					layout={'responsive'}
-				/>
+				<Picture key={key}>
+					<Img
+						src={src}
+						alt={title}
+						width={324}
+						height={324}
+						layout={'responsive'}
+					/>
+				</Picture>
 			))}
 		</Pictures>
 	</Container>
