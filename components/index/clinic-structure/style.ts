@@ -11,7 +11,7 @@ const ArticleSpanTitle = styled(Span)`
 `;
 
 const Container = styled.section`
-	margin: 130px 0 160px 0;
+	margin: 110px 0 110px 0;
 	width: 100%;
 	height: min-content;
 	display: grid;
@@ -19,6 +19,7 @@ const Container = styled.section`
 	place-items: center;
 	justify-content: center;
 	column-gap: 40px;
+	padding: 0 50px;
 
 	@media (max-width: ${BREAKPOINTS.large}px) {
 		grid-template-columns: 1fr;
@@ -29,7 +30,7 @@ const Container = styled.section`
 const Pictures = styled.aside`
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, minmax(215px, 324px));
+	grid-template-columns: repeat(3, minmax(191px, 348px));
 	column-gap: 20px;
 
 	@media (max-width: ${BREAKPOINTS.large}px) {

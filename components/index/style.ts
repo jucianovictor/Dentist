@@ -17,8 +17,7 @@ const SecondaryContent = styled.div`
 	width: 100%;
 	height: max-content;
 	display: grid;
-	grid-auto-columns: 1fr;
-	grid-auto-flow: column;
+	grid-auto-flow: row;
 	background-color: #fff;
 `;
 

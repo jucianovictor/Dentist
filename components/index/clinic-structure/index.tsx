@@ -18,7 +18,7 @@ interface Props {
 const ClinicStructure: React.FC<Props> = ({ theme, pictures }: Props) => (
 	<Container>
 		<Article>
-			<ArticleSpanTitle color={theme.colors.secondary.default}>
+			<ArticleSpanTitle color={theme.colors.secondary.light}>
 				Estrutura <br />
 			</ArticleSpanTitle>
 			<ArticleSpanTitle color={theme.colors.primary.default}>
