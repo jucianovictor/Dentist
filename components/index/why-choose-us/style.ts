@@ -1,16 +1,24 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+import BREAKPOINTS from '../../../styles/utils/breakpoints';
 
 const Container = styled.section`
 	height: min-content;
-	width: min-content;
+	width: 100%;
+	max-width: 1500px;
 	padding: 20px 50px;
 	display: grid;
 	grid-template-rows: min-content 1fr;
 	grid-template-columns: 1fr 726px;
-	column-gap: 118px;
-	row-gap: 30px;
+	row-gap: 15px;
 	place-self: center;
+	place-content: center;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-template-columns: 1fr;
+		place-items: center;
+		row-gap: 40px;
+	}
 `;
 
 const Header = styled.header`
@@ -18,7 +26,11 @@ const Header = styled.header`
 	display: grid;
 	grid-column: 1/2;
 	grid-row: 1;
-	row-gap: 15px;
+	row-gap: 30px;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-column: 1;
+	}
 `;
 
 const Title = styled.h1`
@@ -33,7 +45,7 @@ const SubTitle = styled.h2`
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 28px;
-	color: ${({ theme }) => theme.colors.secondary.default};
+	color: ${({ theme }) => theme.colors.secondary.dark};
 `;
 
 const ListContainer = styled.section`
@@ -42,7 +54,12 @@ const ListContainer = styled.section`
 	height: 564px;
 	grid-auto-rows: 1fr;
 	grid-auto-flow: row;
-	place-items: center;
+	align-items: end;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-column: 1;
+		grid-row: 3;
+	}
 `;
 
 const Item = styled.article`
@@ -89,6 +106,12 @@ const VideoContainer = styled.aside`
 	max-width: 726px;
 	grid-row: 1/3;
 	grid-column: 2;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-row: 2;
+		grid-column: 1;
+		width: 100%;
+	}
 `;
 
 const Video = styled.video`

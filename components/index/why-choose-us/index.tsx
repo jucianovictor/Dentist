@@ -25,9 +25,9 @@ interface Props {
 	src: string;
 }
 
-const VideoPlayer: React.FC<{ src: string }> = ({ src }: { src: string }) => (
-	<Video src={src} width="300%" height={300} hidden={true} />
-);
+const VideoPlayer: React.FC<{ src: string }> = ({ src }: { src: string }) => {
+	return <Video src={src} width="300%" height={300} hidden={true} />;
+};
 
 const WhyChooseUs: React.FC<Props> = ({ theme, src }: Props) => (
 	<Container>
@@ -55,7 +55,7 @@ const WhyChooseUs: React.FC<Props> = ({ theme, src }: Props) => (
 		</ListContainer>
 		<VideoContainer>
 			<Picture>
-				<Play>
+				<Play aria-label="Play">
 					<PlayIcon
 						color={theme.colors.accent.default}
 						width={89}
