@@ -4,6 +4,7 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 import AboutMe from '../components/index/about-me';
 import ClinicStructure from '../components/index/clinic-structure';
+import Depositions from '../components/index/depositions';
 import { IImage } from '../components/index/interfaces';
 import Main from '../components/index/main';
 import { PrimaryContent, SecondaryContent } from '../components/index/style';
@@ -41,6 +42,7 @@ const LandingPage: React.FC<Props> = ({
 					}}
 				/>
 				<WhyChooseUs theme={theme} src={'./video/dentist.mp4'} />
+				<Depositions />
 			</SecondaryContent>
 		</>
 	);
