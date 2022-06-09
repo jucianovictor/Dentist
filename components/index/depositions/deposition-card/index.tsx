@@ -1,7 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { DepositionCardAnimation } from '..';
 import Indirection from '../../../../model/utils/indirection';
-import { Container } from './style';
+import {
+	Container,
+	ProfileCircle,
+	ProfileDeposition,
+	ProfileImg,
+	ProfileName,
+	ProfileProfession,
+} from './style';
 
 export interface Deposition {
 	id: number;
@@ -35,7 +42,26 @@ const DepositionCard: React.FC<Props> = ({
 
 	return (
 		<Container ref={ref} key={deposition.id} animation={animation}>
-			<h1>{old.id}</h1>
+			<ProfileCircle>
+				<ProfileImg
+					src={
+						'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
+					}
+					alt="profile image"
+					width={120}
+					height={120}
+				/>
+			</ProfileCircle>
+			<ProfileName>
+				<strong> {old.name} Nome Sobrenome </strong>
+			</ProfileName>
+			<ProfileProfession>Profissão</ProfileProfession>
+			<br />
+			<ProfileDeposition>
+				is simply dummy text of the printing and typesetting industry. Lorem
+				Ipsum has been the industry&apos;s standard dummy text ever since the
+				1500s dummy text ever.
+			</ProfileDeposition>
 		</Container>
 	);
 };

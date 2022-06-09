@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
 import { DepositionCardAnimation as DepositionCardAnimations } from '..';
 
@@ -9,7 +10,7 @@ const leftNext = keyframes`
   }
 
 	100% {
-		transform: translate(-204px, -127px) scale(0.1, 0.4);
+		transform: translate(-204px, -128.1px) scale(0.1, 0.4);
 		opacity: 0;
   }
 `;
@@ -20,7 +21,7 @@ const middleNext = keyframes`
   }
 
 	100% {
-		transform: translate(-479px, -43px);
+		transform: translate(-480px, -42.5px);
 	}
 `;
 
@@ -30,7 +31,7 @@ const rightNext = keyframes`
   }
 
 	100% {
-		transform: translate(-479px, 43px);
+		transform: translate(-480px, 42.5px);
   }
 `;
 
@@ -40,7 +41,7 @@ const rightNextAux = keyframes`
   }
 
 	100% {
-		transform: translate(-15px, 127px) scale(1);
+		transform: translate(-15px, 128.1px) scale(1);
 		opacity: 1;
   }
 `;
@@ -51,7 +52,7 @@ const leftPrev = keyframes`
   }
 
 	100% {
-		transform: translate(479px, 43px);
+		transform: translate(480px, 42.5px);
 	}
 `;
 
@@ -61,7 +62,7 @@ const middlePrev = keyframes`
   }
 
 	100% {
-		transform: translate(479px, -43px);
+		transform: translate(480px, -42.5px);
 	}
 `;
 
@@ -71,7 +72,7 @@ const rightPrev = keyframes`
   }
 
 	100% {
-		transform: translate(204px, -127px) scale(0.1, 0.4);
+		transform: translate(204px, -128.1px) scale(0.1, 0.4);
 		opacity: 0;
   }
 `;
@@ -82,7 +83,7 @@ const leftPrevAux = keyframes`
   }
 
 	100% {
-		transform: translate(15px, 127px) scale(1);
+		transform: translate(15px, 128.1px) scale(1);
 		opacity: 1;
   }
 `;
@@ -139,12 +140,60 @@ const chooseAnimation = (animation: DepositionCardAnimations): string => {
 };
 
 const Container = styled.article<{ animation: DepositionCardAnimations }>`
+	display: grid;
+	grid-template-rows: calc(131px / 2) min-content min-content 10px min-content;
 	width: ${cardW}px;
 	height: ${cardW / 2}px;
 	background-color: #eeecfe;
 	border-radius: 20px;
-	padding: 5px;
+	padding: 10px 40px;
 	animation: ${({ animation }) => chooseAnimation(animation)} 1s ease-in-out;
 `;
 
-export { Container };
+const ProfileCircle = styled.div`
+	width: 131px;
+	height: 131px;
+	background-color: #c4c4c4;
+	transform: translate(10px, -70px);
+	border-radius: 50%;
+	border: solid 10px #eeecfe;
+`;
+
+const ProfileImg = styled(Image)`
+	border-radius: 50%;
+	display: grid;
+	place-self: center;
+`;
+
+const ProfileName = styled.h3`
+	all: unset;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 28px;
+	color: ${({ theme }) => theme.colors.primary.light};
+`;
+
+const ProfileProfession = styled.h4`
+	all: unset;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 28px;
+	color: ${({ theme }) => theme.colors.secondary.default};
+`;
+
+const ProfileDeposition = styled.p`
+	all: unset;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
+	color: ${({ theme }) => theme.colors.secondary.default};
+`;
+
+export {
+	Container,
+	ProfileCircle,
+	ProfileImg,
+	ProfileName,
+	ProfileProfession,
+	ProfileDeposition,
+};

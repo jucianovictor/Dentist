@@ -25,7 +25,6 @@ const ShadowContainer = styled.section`
 	grid-template-columns: 1fr 1fr 1fr;
 	width: 100%;
 	height: 285px;
-	border: solid 1px red;
 	z-index: 2;
 
 	article:nth-child(n) {
