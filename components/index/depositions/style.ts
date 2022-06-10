@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import adjustLightness from '../../../styles/utils/color-functions';
 
 const Container = styled.section`
 	display: grid;
@@ -99,7 +100,7 @@ const Button = styled.button`
 	place-items: center;
 	width: 58px;
 	height: 58px;
-	background: rgba(239, 90, 124, 0.39);
+	background: ${({ theme }) => adjustLightness(theme.colors.accent.light, 23)};
 	box-shadow: 0px 4px 10px 0px rgb(53 49 86 / 28%);
 	border-radius: 10px;
 	cursor: pointer;
