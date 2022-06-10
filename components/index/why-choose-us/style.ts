@@ -33,14 +33,14 @@ const Header = styled.header`
 	}
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
 	font-style: normal;
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 60px;
 `;
 
-const SubTitle = styled.h2`
+const SubTitle = styled.h3`
 	max-width: 554px;
 	font-weight: 500;
 	font-size: 18px;

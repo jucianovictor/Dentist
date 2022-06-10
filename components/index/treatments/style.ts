@@ -13,7 +13,7 @@ const Container = styled.section`
 	padding: 60px 0;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
 	font-weight: 400;
 	font-size: 22px;
 	line-height: 75px;
@@ -72,13 +72,13 @@ const CardTextContainer = styled.div`
 	position: absolute;
 `;
 
-const CardTitle = styled.h1`
+const CardTitle = styled.h3`
 	font-weight: 700;
 	font-size: 28px;
 	line-height: 25px;
 `;
 
-const CardSubTitle = styled.h2`
+const CardSubTitle = styled.h4`
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 28px;

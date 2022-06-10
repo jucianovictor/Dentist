@@ -88,7 +88,7 @@ const PictureParralaxIcon = styled(PictureParralaxContent)`
 	animation: ${upDownAnimation(0, 100, '%')} 4s infinite ease-in-out;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
 	font-style: normal;
 	font-weight: 700;
 	font-size: 65px;

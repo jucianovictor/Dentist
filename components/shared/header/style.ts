@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
 	}
 `;
 
-const LogoTipo = styled.h1`
+const LogoTipo = styled.h2`
 	font-style: normal;
 	font-weight: 700;
 	font-size: 30px;

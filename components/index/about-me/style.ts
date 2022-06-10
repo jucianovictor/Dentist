@@ -17,7 +17,7 @@ const Container = styled.section`
 	}
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
 	font-weight: 400;
 	font-size: 22px;
 	line-height: 75px;
@@ -52,7 +52,7 @@ const ArticleSpanTitle = styled(Span)`
 	line-height: 60px;
 `;
 
-const SubTitle = styled.h2`
+const SubTitle = styled.h3`
 	font-weight: 700;
 	font-size: 28px;
 	line-height: 60px;
