@@ -119,6 +119,7 @@ const Depositions: React.FC<Props> = ({ theme }) => {
 						onClick={() =>
 							prevDeposition(setSelected, setAnimations, canHandle.value)
 						}
+						aria-label="prev"
 					>
 						<PlayIcon color={theme.colors.accent.default} sizeMultiplier={2} />
 					</Button>
@@ -126,6 +127,7 @@ const Depositions: React.FC<Props> = ({ theme }) => {
 						onClick={() =>
 							nextDeposition(setSelected, setAnimations, canHandle.value)
 						}
+						aria-label="next"
 					>
 						<PlayIcon color={theme.colors.accent.default} sizeMultiplier={2} />
 					</Button>

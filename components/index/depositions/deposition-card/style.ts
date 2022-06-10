@@ -144,7 +144,7 @@ const Container = styled.article<{ animation: DepositionCardAnimations }>`
 	grid-template-rows: calc(131px / 2) min-content min-content 10px min-content;
 	width: ${cardW}px;
 	height: ${cardW / 2}px;
-	background-color: #eeecfe;
+	background-color: rgb(245, 244, 255);
 	border-radius: 20px;
 	padding: 10px 40px;
 	animation: ${({ animation }) => chooseAnimation(animation)} 1s ease-in-out;
@@ -156,7 +156,7 @@ const ProfileCircle = styled.div`
 	background-color: #c4c4c4;
 	transform: translate(10px, -70px);
 	border-radius: 50%;
-	border: solid 10px #eeecfe;
+	border: solid 10px rgb(245, 244, 255);
 `;
 
 const ProfileImg = styled(Image)`
@@ -170,7 +170,7 @@ const ProfileName = styled.h3`
 	font-weight: 700;
 	font-size: 25px;
 	line-height: 28px;
-	color: ${({ theme }) => theme.colors.primary.light};
+	color: ${({ theme }) => theme.colors.primary.default};
 `;
 
 const ProfileProfession = styled.h4`
@@ -178,7 +178,7 @@ const ProfileProfession = styled.h4`
 	font-weight: 600;
 	font-size: 13px;
 	line-height: 28px;
-	color: ${({ theme }) => theme.colors.secondary.default};
+	color: ${({ theme }) => theme.colors.secondary.dark};
 `;
 
 const ProfileDeposition = styled.p`
@@ -186,7 +186,7 @@ const ProfileDeposition = styled.p`
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 18px;
-	color: ${({ theme }) => theme.colors.secondary.default};
+	color: ${({ theme }) => theme.colors.secondary.dark};
 `;
 
 export {
