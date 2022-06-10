@@ -106,9 +106,17 @@ const Button = styled.button`
 	cursor: pointer;
 `;
 
+const H2 = styled.h2`
+	color: ${({ theme }) => theme.colors.primary.default};
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 60px;
+`;
+
 export {
 	Container,
 	SubContainer,
+	H2,
 	Background,
 	ShadowContainer,
 	ButtonContainer,

@@ -12,6 +12,7 @@ import {
 	Button,
 	ButtonContainer,
 	Container,
+	H2,
 	ShadowContainer,
 	SubContainer,
 } from './style';
@@ -112,6 +113,7 @@ const Depositions: React.FC<Props> = ({ theme }) => {
 	return (
 		<Container>
 			<SubContainer>
+				<H2>Depoimentos</H2>
 				<ButtonContainer>
 					<Button
 						onClick={() =>
