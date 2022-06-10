@@ -18,14 +18,13 @@ const SubContainer = styled.section`
 `;
 
 const ShadowContainer = styled.section`
-	top: 20%;
+	top: 26%;
 	position: absolute;
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
 	width: 100%;
 	height: 285px;
-	z-index: 2;
 
 	article:nth-child(n) {
 		justify-self: center;
@@ -65,7 +64,8 @@ const ShadowContainer = styled.section`
 `;
 
 const Background = styled.div`
-	grid-row: 2;
+	grid-column: 1/3;
+	grid-row: 2/3;
 	width: 100%;
 	height: 230px;
 	background: linear-gradient(
@@ -76,4 +76,40 @@ const Background = styled.div`
 	border-radius: 10px;
 `;
 
-export { Container, SubContainer, Background, ShadowContainer };
+const ButtonContainer = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 30px;
+	grid-column: 2;
+	width: fit-content;
+	height: min-content;
+	align-self: center;
+	justify-self: end;
+
+	button:nth-child(1) {
+		svg:nth-child(1) {
+			transform: rotate(180deg);
+		}
+	}
+`;
+
+const Button = styled.button`
+	all: unset;
+	display: grid;
+	place-items: center;
+	width: 58px;
+	height: 58px;
+	background: rgba(239, 90, 124, 0.39);
+	box-shadow: 0px 4px 10px 0px rgb(53 49 86 / 28%);
+	border-radius: 10px;
+	cursor: pointer;
+`;
+
+export {
+	Container,
+	SubContainer,
+	Background,
+	ShadowContainer,
+	ButtonContainer,
+	Button,
+};

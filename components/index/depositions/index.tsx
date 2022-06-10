@@ -1,13 +1,24 @@
 import { Dispatch, SetStateAction, useState } from 'react';
+import { DefaultTheme } from 'styled-components';
 import {
 	DCLinkedList,
 	DCNode,
 } from '../../../model/utils/doubly-cyclic-linked-list';
 import Indirection from '../../../model/utils/indirection';
+import PlayIcon from '../../shared/play-icon';
 import DepositionCard, { Deposition } from './deposition-card';
-import { Background, Container, ShadowContainer, SubContainer } from './style';
+import {
+	Background,
+	Button,
+	ButtonContainer,
+	Container,
+	ShadowContainer,
+	SubContainer,
+} from './style';
 
-interface Props {}
+interface Props {
+	theme: DefaultTheme;
+}
 
 export enum DepositionCardAnimation {
 	LEFT_PREV,
@@ -63,7 +74,7 @@ const nextDeposition = (
 	});
 };
 
-const Depositions: React.FC<Props> = () => {
+const Depositions: React.FC<Props> = ({ theme }) => {
 	const carrousel = new DCLinkedList<Deposition>();
 	carrousel.append({
 		id: 1,
@@ -101,22 +112,22 @@ const Depositions: React.FC<Props> = () => {
 	return (
 		<Container>
 			<SubContainer>
-				<div>
-					<button
+				<ButtonContainer>
+					<Button
 						onClick={() =>
 							prevDeposition(setSelected, setAnimations, canHandle.value)
 						}
 					>
-						prev
-					</button>
-					<button
+						<PlayIcon color={theme.colors.accent.default} sizeMultiplier={2} />
+					</Button>
+					<Button
 						onClick={() =>
 							nextDeposition(setSelected, setAnimations, canHandle.value)
 						}
 					>
-						next
-					</button>
-				</div>
+						<PlayIcon color={theme.colors.accent.default} sizeMultiplier={2} />
+					</Button>
+				</ButtonContainer>
 				<Background />
 			</SubContainer>
 			<ShadowContainer>

@@ -21,7 +21,7 @@ const middleNext = keyframes`
   }
 
 	100% {
-		transform: translate(-480px, -42.5px);
+		transform: translate(-480px, -42.8px);
 	}
 `;
 
@@ -31,7 +31,7 @@ const rightNext = keyframes`
   }
 
 	100% {
-		transform: translate(-480px, 42.5px);
+		transform: translate(-480px, 42.8px);
   }
 `;
 
@@ -52,7 +52,7 @@ const leftPrev = keyframes`
   }
 
 	100% {
-		transform: translate(480px, 42.5px);
+		transform: translate(480px, 42.8px);
 	}
 `;
 
@@ -62,7 +62,7 @@ const middlePrev = keyframes`
   }
 
 	100% {
-		transform: translate(480px, -42.5px);
+		transform: translate(480px, -42.8px);
 	}
 `;
 

@@ -42,7 +42,7 @@ const LandingPage: React.FC<Props> = ({
 					}}
 				/>
 				<WhyChooseUs theme={theme} src={'./video/dentist.mp4'} />
-				<Depositions />
+				<Depositions theme={theme} />
 			</SecondaryContent>
 		</>
 	);
