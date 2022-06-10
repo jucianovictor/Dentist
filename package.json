@@ -7,9 +7,12 @@
 		"node": ">=14.0.0"
 	},
 	"scripts": {
+		"analyze": "source-map-explorer .next/static/**/*.js",
 		"dev": "next dev",
 		"build": "npm run lint && next build",
-		"start": "npm run build && next start",
+		"build:analyze": "npm run build && npm run analyze",
+		"start": "next start",
+		"up": "npm run build && next start",
 		"test": "jest --env=jsdom --verbose=true",
 		"lint": "next lint --fix"
 	},
@@ -42,6 +45,7 @@
 		"jest-styled-components": "^7.0.4",
 		"next-compose-plugins": "^2.2.1",
 		"prettier": "^2.6.1",
+		"source-map-explorer": "^2.5.2",
 		"typescript": "^4.2.4"
 	}
 }
