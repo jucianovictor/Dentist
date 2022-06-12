@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
 import { DepositionCardAnimation as DepositionCardAnimations } from '..';
+import BREAKPOINTS from '../../../../styles/utils/breakpoints';
 
 const cardW = 450;
 
@@ -90,7 +91,6 @@ const leftPrevAux = keyframes`
 
 const reloadAux = keyframes`
 	0% {
-
 		background: red;
   }
 
@@ -148,6 +148,10 @@ const Container = styled.article<{ animation: DepositionCardAnimations }>`
 	border-radius: 20px;
 	padding: 10px 40px;
 	animation: ${({ animation }) => chooseAnimation(animation)} 1s ease-in-out;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		text-align: center;
+	}
 `;
 
 const ProfileCircle = styled.div`
@@ -157,6 +161,11 @@ const ProfileCircle = styled.div`
 	transform: translate(10px, -70px);
 	border-radius: 50%;
 	border: solid 10px rgb(245, 244, 255);
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		transform: translate(0, -40px);
+		place-self: center;
+	}
 `;
 
 const ProfileImg = styled(Image)`

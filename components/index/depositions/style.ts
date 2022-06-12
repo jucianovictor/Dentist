@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BREAKPOINTS from '../../../styles/utils/breakpoints';
 import adjustLightness from '../../../styles/utils/color-functions';
 
 const Container = styled.section`
@@ -8,6 +9,14 @@ const Container = styled.section`
 	width: 1440px;
 	height: 550px;
 	margin-bottom: 380px;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-template-rows: min-content min-content;
+		row-gap: 80px;
+		height: min-content;
+		width: min-content;
+		justify-content: center;
+	}
 `;
 
 const SubContainer = styled.section`
@@ -16,6 +25,13 @@ const SubContainer = styled.section`
 	height: 550px;
 	grid-template-rows: 1fr 326px;
 	padding: 50px 50px;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-template-rows: min-content 1fr;
+		grid-template-columns: 1fr;
+		text-align: center;
+		height: 100%;
+	}
 `;
 
 const ShadowContainer = styled.section`
@@ -62,6 +78,43 @@ const ShadowContainer = styled.section`
 		background-color: #eeecfe;
 		transform: translate(204px, 0px) scale(0.1, 0.4);
 	}
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		display: grid;
+		align-self: end;
+		position: initial;
+		height: min-content;
+		width: min-content;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+		align-items: end;
+		row-gap: 100px;
+
+		article:nth-child(n) {
+			display: grid;
+			position: initial !important;
+		}
+
+		article:nth-child(1) {
+			display: none;
+		}
+
+		article:nth-child(2) {
+			grid-column: 1 !important;
+		}
+
+		article:nth-child(3) {
+			grid-column: 1 !important;
+		}
+
+		article:nth-child(4) {
+			grid-column: 1 !important;
+		}
+
+		article:nth-child(5) {
+			display: none;
+		}
+	}
 `;
 
 const Background = styled.div`
@@ -75,6 +128,10 @@ const Background = styled.div`
 		rgba(168, 157, 255, 0.59) 115.4%
 	);
 	border-radius: 10px;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		display: none;
+	}
 `;
 
 const ButtonContainer = styled.div`
@@ -91,6 +148,10 @@ const ButtonContainer = styled.div`
 		svg:nth-child(1) {
 			transform: rotate(180deg);
 		}
+	}
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		display: none;
 	}
 `;
 
