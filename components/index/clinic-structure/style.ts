@@ -61,7 +61,7 @@ const Picture = styled.picture`
 		background: ${({ theme }) => theme.colors.primary.contrast};
 		width: 100%;
 		height: 100%;
-		transform: translate(0%, -100%);
+		transform: translateY(-100%);
 		clip-path: polygon(
 			36% 49%,
 			49% 49%,

@@ -18,7 +18,7 @@ const Title = styled.h2`
 	font-size: 22px;
 	line-height: 75px;
 	letter-spacing: 0.5em;
-	transform: translate(0.5em, 0px);
+	transform: translateX(0.5em);
 	color: ${props => props.theme.colors.primary.default};
 `;
 
