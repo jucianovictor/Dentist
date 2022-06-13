@@ -22,7 +22,7 @@ const middleNext = keyframes`
   }
 
 	100% {
-		transform: translate(-480px, -42.8px);
+		transform: translate(-473.4px, -42.8px);
 	}
 `;
 
@@ -32,7 +32,7 @@ const rightNext = keyframes`
   }
 
 	100% {
-		transform: translate(-480px, 42.8px);
+		transform: translate(-473.4px, 42.8px);
   }
 `;
 
@@ -42,7 +42,7 @@ const rightNextAux = keyframes`
   }
 
 	100% {
-		transform: translate(-15px, 128.1px) scale(1);
+		transform: translate(-12px, 128.1px) scale(1);
 		opacity: 1;
   }
 `;
@@ -53,7 +53,7 @@ const leftPrev = keyframes`
   }
 
 	100% {
-		transform: translate(480px, 42.8px);
+		transform: translate(473.4px, 42.8px);
 	}
 `;
 
@@ -63,7 +63,7 @@ const middlePrev = keyframes`
   }
 
 	100% {
-		transform: translate(480px, -42.8px);
+		transform: translate(473.4px, -42.8px);
 	}
 `;
 
@@ -84,7 +84,7 @@ const leftPrevAux = keyframes`
   }
 
 	100% {
-		transform: translate(15px, 128.1px) scale(1);
+		transform: translate(12px, 128.1px) scale(1);
 		opacity: 1;
   }
 `;
