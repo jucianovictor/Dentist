@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import BREAKPOINTS from '../../../styles/utils/breakpoints';
-import adjustLightness from '../../../styles/utils/color-functions';
+import { adjustLightness } from '../../../styles/utils/color-functions';
 
 const Container = styled.section`
 	display: grid;
@@ -8,11 +8,11 @@ const Container = styled.section`
 	position: relative;
 	width: 1420px;
 	height: 550px;
-	margin-bottom: 380px;
+	margin: 80px 0;
 
 	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
 		grid-template-rows: min-content min-content;
-		row-gap: 80px;
+		row-gap: 100px;
 		height: min-content;
 		width: min-content;
 		justify-content: center;
@@ -24,13 +24,14 @@ const SubContainer = styled.section`
 	width: 100%;
 	height: 550px;
 	grid-template-rows: 1fr 326px;
-	padding: 50px 50px;
+	padding: 50px;
 
 	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
 		grid-template-rows: min-content 1fr;
 		grid-template-columns: 1fr;
 		text-align: center;
 		height: 100%;
+		padding: 20px;
 	}
 `;
 
@@ -97,7 +98,8 @@ const ShadowContainer = styled.section`
 
 		article:nth-child(1) {
 			visibility: hidden;
-			position: relative !important;
+			grid-row: 1;
+			grid-column: 1;
 		}
 
 		article:nth-child(2) {
@@ -117,7 +119,8 @@ const ShadowContainer = styled.section`
 
 		article:nth-child(5) {
 			visibility: hidden;
-			position: relative !important;
+			grid-row: 1;
+			grid-column: 1;
 		}
 	}
 `;
