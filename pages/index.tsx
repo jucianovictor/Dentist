@@ -7,6 +7,7 @@ import ClinicStructure from '../components/index/clinic-structure';
 import Depositions from '../components/index/depositions';
 import { IImage } from '../components/index/interfaces';
 import Main from '../components/index/main';
+import Schedules from '../components/index/schedules';
 import { PrimaryContent, SecondaryContent } from '../components/index/style';
 import Treatments from '../components/index/treatments';
 import { WhyChooseUs } from '../components/index/why-choose-us';
@@ -43,6 +44,7 @@ const LandingPage: React.FC<Props> = ({
 				/>
 				<WhyChooseUs theme={theme} src={'./video/dentist.mp4'} />
 				<Depositions theme={theme} />
+				<Schedules theme={theme} />
 			</SecondaryContent>
 		</>
 	);
