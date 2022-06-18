@@ -147,7 +147,7 @@ const Container = styled.article<{ animation: DepositionCardAnimations }>`
 	background-color: rgb(245, 244, 255);
 	border-radius: 20px;
 	padding: 10px 40px;
-	animation: ${({ animation }) => chooseAnimation(animation)} 1s ease-in-out;
+	animation: ${({ animation }) => chooseAnimation(animation)} 0.8s ease-in-out;
 
 	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
 		text-align: center;
@@ -190,7 +190,7 @@ const ProfileProfession = styled.h4`
 	color: ${({ theme }) => theme.colors.secondary.dark};
 `;
 
-const ProfileDeposition = styled.p`
+const ProfileDeposition = styled.blockquote`
 	all: unset;
 	font-weight: 500;
 	font-size: 12px;
