@@ -1,7 +1,4 @@
-export default function adjustBrightness(
-	color: string,
-	percent: number
-): string {
+function adjustLightness(color: string, percent: number): string {
 	const num = parseInt(color.replace('#', ''), 16),
 		amt = Math.round(2.55 * percent),
 		R = (num >> 16) + amt,
@@ -19,3 +16,5 @@ export default function adjustBrightness(
 			.slice(1)
 	);
 }
+
+export { adjustLightness };
