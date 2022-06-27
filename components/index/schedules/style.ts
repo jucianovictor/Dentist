@@ -1,15 +1,17 @@
 import styled from 'styled-components';
+import BREAKPOINTS from '../../../styles/utils/breakpoints';
 
 const Container = styled.section`
 	display: grid;
 	column-gap: 160px;
 	row-gap: 50px;
 	height: min-content;
-	width: min-content;
+	max-width: 1420px;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(3, min-content);
 	place-self: center;
-	margin: 90px 0;
+	margin: 30px 0;
+	padding: 0 50px;
 
 	article:nth-child(n) {
 		grid-column: 1;
@@ -35,6 +37,31 @@ const Container = styled.section`
 	article:nth-child(5) {
 		grid-column: 2;
 		grid-row: 3;
+	}
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5, min-content);
+		row-gap: 80px;
+		height: min-content;
+		width: min-content;
+		justify-items: center;
+
+		article:nth-child(n) {
+			grid-column: 1;
+		}
+
+		article:nth-child(1) {
+			grid-row: 2;
+		}
+
+		article:nth-child(2) {
+			grid-row: 3;
+		}
+
+		article:nth-child(3) {
+			grid-row: 4;
+		}
 	}
 `;
 
@@ -74,6 +101,19 @@ const InfoCardsContainer = styled.section`
 	height: min-content;
 	place-self: start;
 	row-gap: 70px;
+
+	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
+		grid-column: 1;
+		grid-row: 1;
+
+		article:nth-child(1) {
+			grid-row: 3;
+		}
+
+		article:nth-child(2) {
+			grid-row: 2;
+		}
+	}
 `;
 
 const InfoCardContainer = styled.article<{ bgColor?: string; color?: string }>`
