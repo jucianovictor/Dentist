@@ -5,6 +5,7 @@ import { useTheme } from 'styled-components';
 import AboutMe from '../components/index/about-me';
 import ClinicStructure from '../components/index/clinic-structure';
 import Depositions from '../components/index/depositions';
+import CompanyHealth from '../components/index/health-insurance';
 import { IImage } from '../components/index/interfaces';
 import Main from '../components/index/main';
 import Schedules from '../components/index/schedules';
@@ -16,11 +17,13 @@ import Header from '../components/shared/header';
 interface Props {
 	cards: Array<IImage & { subtitle: string }>;
 	clinicStructurePictures: IImage[];
+	companyImages: IImage[];
 }
 
 const LandingPage: React.FC<Props> = ({
 	cards,
 	clinicStructurePictures,
+	companyImages,
 }: Props) => {
 	const theme = useTheme();
 	return (
@@ -45,6 +48,7 @@ const LandingPage: React.FC<Props> = ({
 				<WhyChooseUs theme={theme} src={'./video/dentist.mp4'} />
 				<Depositions theme={theme} />
 				<Schedules theme={theme} />
+				<CompanyHealth companyImages={companyImages} />
 			</SecondaryContent>
 		</>
 	);
@@ -99,8 +103,35 @@ export const getStaticProps: GetStaticProps = async () => {
 		},
 	];
 
+	const companyImages: IImage[] = [
+		{
+			src: '/images/convenio-1.png',
+			title: 'Convênio 1',
+		},
+		{
+			src: '/images/convenio-2.png',
+			title: 'Convênio 2',
+		},
+		{
+			src: '/images/convenio-3.png',
+			title: 'Convênio 3',
+		},
+		{
+			src: '/images/convenio-4.png',
+			title: 'Convênio 4',
+		},
+		{
+			src: '/images/convenio-5.png',
+			title: 'Convênio 5',
+		},
+		{
+			src: '/images/convenio-6.png',
+			title: 'Convênio 6',
+		},
+	];
+
 	return {
-		props: { cards, clinicStructurePictures },
+		props: { cards, clinicStructurePictures, companyImages },
 	};
 };
 
