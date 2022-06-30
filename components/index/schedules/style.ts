@@ -73,7 +73,7 @@ const ScheduleContainer = styled.article`
 `;
 
 const Label = styled.h2`
-	color: ${({ theme }) => theme.colors.primary.light};
+	color: ${({ theme }) => theme.colors.primary.default};
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 28px;
@@ -84,7 +84,7 @@ const Timetable = styled.div`
 	grid-template-columns: 1fr 1fr;
 	place-items: center;
 	background: #f5f4ff;
-	color: ${({ theme }) => theme.colors.secondary.light};
+	color: ${({ theme }) => theme.colors.secondary.dark};
 	height: 76px;
 	border: 1px solid rgba(112, 97, 238, 0.13);
 	border-radius: 10px;

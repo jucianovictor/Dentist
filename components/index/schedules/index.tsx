@@ -39,20 +39,17 @@ const Schedules: React.FC<Props> = ({ theme }: Props) => (
 		<InfoCardsContainer>
 			<InfoCardContainer>
 				<IconContainer placeSelf="start" />
-				<H2 color={theme.colors.primary.light}>
+				<H2 color={theme.colors.primary.default}>
 					<Span color={theme.colors.secondary.light}>Horário de </Span>
 					<span>Atendimento</span>
 				</H2>
-				<InfoCardContent
-					color={theme.colors.secondary.light}
-					alignSelf="center"
-				>
+				<InfoCardContent color={theme.colors.secondary.dark} alignSelf="center">
 					is simply dummy text of the printing and typesetting industry. Lorem
 					Ipsum has.
 				</InfoCardContent>
 			</InfoCardContainer>
 			<InfoCardContainer
-				bgColor={theme.colors.primary.light}
+				bgColor={theme.colors.primary.default}
 				color={theme.colors.primary.contrast}
 			>
 				<IconContainer
