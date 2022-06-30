@@ -7,8 +7,8 @@ const nextConfig = {
 	images: {
 		domains: ['i.ibb.co', 'freepngimg.com', 'raw.githubusercontent.com'],
 		formats: ['image/avif', 'image/webp'],
-		deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+		deviceSizes: [320, 520, 768, 1024, 1440, 1920, 2560, 3840],
+		imageSizes: [16, 32, 48, 64, 96, 128, 256],
 	},
 };
 
