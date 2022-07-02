@@ -12,18 +12,21 @@ interface Props {
 	};
 	width?: string;
 	height?: string;
+	borderRadius?: string;
 }
 
 const Button: React.FC<Props> = ({
 	text,
 	width = '340px',
 	height = '60px',
+	borderRadius = '5rem',
 	themeColor,
 	icon,
 }: Props) => {
 	return (
 		<ButtonContainer
 			{...{
+				borderRadius,
 				hasIcon: !!icon,
 				width,
 				height,

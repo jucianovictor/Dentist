@@ -8,6 +8,7 @@ import Depositions from '../components/index/depositions';
 import CompanyHealth from '../components/index/health-insurance';
 import { IImage } from '../components/index/interfaces';
 import Main from '../components/index/main';
+import MedicalApointment from '../components/index/medical-appointment';
 import Schedules from '../components/index/schedules';
 import { PrimaryContent, SecondaryContent } from '../components/index/style';
 import Treatments from '../components/index/treatments';
@@ -49,6 +50,7 @@ const LandingPage: React.FC<Props> = ({
 				<Depositions theme={theme} />
 				<Schedules theme={theme} />
 				<CompanyHealth companyImages={companyImages} />
+				<MedicalApointment theme={theme} />
 			</SecondaryContent>
 		</>
 	);

@@ -7,8 +7,10 @@ const ButtonContainer = styled.div<{
 	width: string;
 	height: string;
 	hasIcon: boolean;
+	borderRadius: string;
 }>`
 	${ButtonBase};
+	border-radius: ${({ borderRadius }) => borderRadius};
 	width: ${props => props.width};
 	height: ${props => props.height};
 	padding: 0 5px;
