@@ -5,6 +5,7 @@ const BaseRectangleInput = styled(BaseInput)`
 	width: 100%;
 	height: 60px;
 	border-radius: 10px;
+	text-align: start;
 `;
 
 export default BaseRectangleInput;
