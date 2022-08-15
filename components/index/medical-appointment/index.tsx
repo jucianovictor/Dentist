@@ -3,6 +3,7 @@ import BaseRectangleInput from '../../../styles/template/base-rectangle-input/st
 import { Select } from '../../../styles/template/select/style';
 import Span from '../../../styles/template/span/span';
 import Button from '../../shared/button';
+import DatePicker from '../../shared/date-picker';
 import { Container, DoctorImage, DoctorPicture, Form, Title } from './style';
 
 interface Props {
@@ -27,7 +28,11 @@ const MedicalApointment: React.FC<Props> = ({ theme }: Props) => {
 				<Form>
 					<BaseRectangleInput type="text" placeholder="Seu nome" />
 					<BaseRectangleInput type="email" placeholder="Seu e-mail" />
-					<BaseRectangleInput type="date" placeholder="Data da Consulta" />
+					<DatePicker
+						value={null}
+						placeholder="Data da consulta"
+						alt="Date picker"
+					/>
 					<BaseRectangleInput type="time" placeholder="Horário da Consulta" />
 					<Select name="Tratamentos">
 						<option>Selecione o tipo de consulta</option>
