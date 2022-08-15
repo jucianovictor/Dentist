@@ -79,22 +79,36 @@ const Depositions: React.FC<Props> = ({ theme }) => {
 	const carrousel = new DCLinkedList<Deposition>();
 	carrousel.append({
 		id: 1,
-		name: '',
-		profession: '',
+		name: 'Nome Sobrenome 1',
+		profession: 'Profissão 1',
 		text: '',
 	});
 
 	carrousel.append({
 		id: 2,
-		name: '',
-		profession: '',
+		name: 'Nome Sobrenome 2',
+		profession: 'Profissão 2',
 		text: '',
 	});
 
 	carrousel.append({
 		id: 3,
-		name: '',
-		profession: '',
+		name: 'Nome Sobrenome 3',
+		profession: 'Profissão 3',
+		text: '',
+	});
+
+	carrousel.append({
+		id: 4,
+		name: 'Nome Sobrenome 4',
+		profession: 'Profissão 4',
+		text: '',
+	});
+
+	carrousel.append({
+		id: 5,
+		name: 'Nome Sobrenome 5',
+		profession: 'Profissão 5',
 		text: '',
 	});
 

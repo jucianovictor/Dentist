@@ -22,7 +22,7 @@ const middleNext = keyframes`
   }
 
 	100% {
-		transform: translate(-473.4px, -42.8px);
+		transform: translate(-473.4px, -42px);
 	}
 `;
 
@@ -32,7 +32,7 @@ const rightNext = keyframes`
   }
 
 	100% {
-		transform: translate(-473.4px, 42.8px);
+		transform: translate(-473.4px, 42px);
   }
 `;
 

@@ -53,7 +53,7 @@ const DepositionCard: React.FC<Props> = ({
 				/>
 			</ProfileCircle>
 			<ProfileName>
-				<strong> {old.name} Nome Sobrenome </strong>
+				<strong> {old.name} </strong>
 			</ProfileName>
 			<ProfileProfession>Profissão</ProfileProfession>
 			<br />
