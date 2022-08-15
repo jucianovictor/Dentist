@@ -18,6 +18,11 @@ class DCLinkedList<T> {
 		this.selected = this.head;
 	}
 
+	from(list: T[]): DCLinkedList<T> {
+		list.forEach(value => this.append(value));
+		return this;
+	}
+
 	append(value: T): void {
 		const node = new DCNode<T>(value);
 		if (!this.head) {
