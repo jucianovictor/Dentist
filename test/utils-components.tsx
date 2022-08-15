@@ -4,11 +4,11 @@ import theme from '../styles/theme';
 
 import GlobalStyle from '../styles/global';
 
-const GlobalStyleAndAllProviders: React.FC = ({ children }) => (
+const WithTheme: React.FC = ({ children }) => (
 	<ThemeProvider theme={theme}>
 		{children}
 		<GlobalStyle />
 	</ThemeProvider>
 );
 
-export default GlobalStyleAndAllProviders;
+export default WithTheme;
