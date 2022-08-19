@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom';
 import { fireEvent, screen } from '@testing-library/react';
 import DatePicker from '.';
-import { getMonthNameFromDate } from '../../../model/utils/date-utils';
 import renderWithTheme from '../../../test/utils';
 
 const placeholder = 'Select a date';
@@ -44,7 +43,9 @@ describe('DatePicker', () => {
 			).toLocaleDateString()
 		);
 		expect(monthLabel.textContent).toBe(
-			getMonthNameFromDate(new Date(currentYear, currentMonth, 20))
+			new Date(currentYear, currentMonth, 20).toLocaleDateString('default', {
+				month: 'long',
+			})
 		);
 	});
 
@@ -69,7 +70,9 @@ describe('DatePicker', () => {
 			new Date(currentYear, currentMonth, 20).toLocaleDateString()
 		);
 		expect(monthLabel.textContent).toBe(
-			getMonthNameFromDate(new Date(currentYear, currentMonth, 20))
+			new Date(currentYear, currentMonth, 20).toLocaleDateString('default', {
+				month: 'long',
+			})
 		);
 		expect(changed).toBeTruthy();
 	});

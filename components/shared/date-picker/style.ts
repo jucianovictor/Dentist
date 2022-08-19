@@ -21,12 +21,6 @@ const getColor = (modifier: DateColorModifier, theme: DefaultTheme) => {
 	}
 };
 
-const InputDate = styled.input.attrs({
-	type: 'date',
-})`
-	display: none;
-`;
-
 const Container = styled.div`
 	width: 100%;
 	height: min-content;
@@ -115,7 +109,6 @@ const DayNumber = styled.span<{ dateStyle: DateColorModifier }>`
 export {
 	Container,
 	InputLabel,
-	InputDate,
 	Dropdown,
 	MonthSwitcher,
 	MonthLabel,

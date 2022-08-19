@@ -1,8 +1,5 @@
+import moment from 'moment';
 import React, { useEffect } from 'react';
-import {
-	getMonthNameFromDate,
-	getNumberOfDaysFromDate,
-} from '../../../model/utils/date-utils';
 import Flow from '../../../model/utils/flow';
 import {
 	BtnMonthSwitcher,
@@ -32,31 +29,54 @@ const DatePicker: React.FC<Props> = ({
 	const today = new Date();
 	const labelInputRef = React.useRef<HTMLInputElement>(null);
 	const dropdownRef = React.useRef<HTMLDivElement>(null);
+	const calendarRef = React.useRef<HTMLDivElement>(null);
+	const monthSwitcherRef = React.useRef<HTMLDivElement>(null);
+
 	const [selectedDate, selectDate] = React.useState<Date>(value);
 	const [toggledDropdown, toggleDropdown] = React.useState(false);
 	const [selectedMonth, selectMonth] = React.useState(
 		(value || today).getMonth()
 	);
+	const [selectedYear, selectYear] = React.useState(
+		(value || today).getFullYear()
+	);
 
-	useEffect(() => {
-		window.addEventListener('mousedown', (e: MouseEvent) => {
-			const calendarElement = dropdownRef.current.querySelector('#calendar');
-			const monthSwitcherElement =
-				dropdownRef.current.querySelector('#month-switcher');
+	const addOnBlur = () =>
+		window.addEventListener('mousedown', ({ target }: MouseEvent) => {
 			if (
-				calendarElement !== (e.target as HTMLElement).parentElement &&
-				monthSwitcherElement !== (e.target as HTMLElement).parentElement &&
-				labelInputRef.current !== (e.target as HTMLElement) &&
-				dropdownRef.current !== (e.target as HTMLElement).parentElement &&
-				dropdownRef.current !== (e.target as HTMLElement)
+				[labelInputRef, dropdownRef, calendarRef, monthSwitcherRef]
+					.map(ref => ref.current)
+					.every(
+						element =>
+							!(
+								element === target ||
+								element === (target as HTMLElement).parentElement
+							)
+					)
 			) {
 				toggleDropdown(false);
 			}
 		});
-	}, []);
 
-	const nextMonth = () => selectMonth(month => (month == 11 ? 1 : month + 1));
-	const prevMonth = () => selectMonth(month => (month == 0 ? 11 : month - 1));
+	useEffect(addOnBlur, []);
+
+	const nextMonth = () =>
+		selectMonth(month => {
+			if (month == 11) {
+				selectYear(year => year + 1);
+				return 1;
+			}
+			return month + 1;
+		});
+
+	const prevMonth = () =>
+		selectMonth(month => {
+			if (month == 0) {
+				selectYear(year => year - 1);
+				return 11;
+			}
+			return month - 1;
+		});
 
 	const getDateStyle = (selectedDate: Date, day: number): DateColorModifier => {
 		if (
@@ -92,36 +112,27 @@ const DatePicker: React.FC<Props> = ({
 				onClick={() => toggleDropdown(!toggledDropdown)}
 			/>
 			<Dropdown ref={dropdownRef} toggle={toggledDropdown}>
-				<MonthSwitcher id="month-switcher">
+				<MonthSwitcher ref={monthSwitcherRef}>
 					<BtnMonthSwitcher onClick={prevMonth}>&lsaquo;</BtnMonthSwitcher>
 					<MonthLabel aria-label="month">
-						{getMonthNameFromDate(
-							Flow.of(new Date())
-								.action(date => date.setMonth(selectedMonth))
-								.get()
-						)}
+						{Flow.of(new Date())
+							.action(date => date.setMonth(selectedMonth))
+							.get()
+							.toLocaleDateString('default', {
+								month: 'long',
+							})}
 					</MonthLabel>
 					<BtnMonthSwitcher onClick={nextMonth}>&rsaquo;</BtnMonthSwitcher>
 				</MonthSwitcher>
-				<Calendar id="calendar">
-					{Array(
-						getNumberOfDaysFromDate(
-							new Date((selectedDate || today).getFullYear(), selectedMonth, 1)
-						)
-					)
+				<Calendar ref={calendarRef}>
+					{Array(moment(new Date(selectedYear, selectedMonth, 1)).daysInMonth())
 						.fill(0)
 						.map((_, index) => (
 							<DayNumber
 								key={index}
 								onClick={() =>
-									selectDate(previousDate =>
-										Flow.of(
-											new Date(
-												(previousDate || today).getFullYear(),
-												selectedMonth,
-												index + 1
-											)
-										)
+									selectDate(() =>
+										Flow.of(new Date(selectedYear, selectedMonth, index + 1))
 											.action(date => onChange && onChange(date))
 											.get()
 									)
