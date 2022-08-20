@@ -6,7 +6,6 @@ import AboutMe from '../components/index/about-me';
 import ClinicStructure from '../components/index/clinic-structure';
 import Depositions from '../components/index/depositions';
 import CompanyHealth from '../components/index/health-insurance';
-import { IImage } from '../components/index/interfaces';
 import Main from '../components/index/main';
 import MedicalApointment from '../components/index/medical-appointment';
 import Schedules from '../components/index/schedules';
@@ -14,6 +13,7 @@ import { PrimaryContent, SecondaryContent } from '../components/index/style';
 import Treatments from '../components/index/treatments';
 import { WhyChooseUs } from '../components/index/why-choose-us';
 import Header from '../components/shared/header';
+import { IImage } from '../components/shared/interface/image';
 
 interface Props {
 	cards: Array<IImage & { subtitle: string }>;

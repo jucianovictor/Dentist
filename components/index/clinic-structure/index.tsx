@@ -1,6 +1,6 @@
 import React from 'react';
 import { DefaultTheme } from 'styled-components';
-import { IImage } from '../interfaces';
+import { IImage } from '../../shared/interface/image';
 import {
 	Article,
 	ArticleSpanTitle,

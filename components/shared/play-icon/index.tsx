@@ -1,5 +1,5 @@
 import React from 'react';
-import IconProps from '../icon';
+import IconProps from '../interface/icon';
 
 const PlayIcon: React.FC<IconProps> = ({
 	color = 'red',

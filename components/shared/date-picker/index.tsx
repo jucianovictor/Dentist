@@ -34,6 +34,8 @@ const DatePicker: React.FC<Props> = ({
 
 	const [selectedDate, selectDate] = React.useState<Date>(value);
 	const [toggledDropdown, toggleDropdown] = React.useState(false);
+
+	//Talvez seja melhor fazer com 1 useState<Date>()
 	const [selectedMonth, selectMonth] = React.useState(
 		(value || today).getMonth()
 	);

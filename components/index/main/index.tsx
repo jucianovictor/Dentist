@@ -25,6 +25,7 @@ const Main: React.FC<Props> = ({ theme }: Props) => (
 				width={602}
 				height={924}
 				layout={'fixed'}
+				placeholder="empty"
 				priority={true}
 				alt="dentist"
 			/>

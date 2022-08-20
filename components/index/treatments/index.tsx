@@ -2,7 +2,7 @@ import { DefaultTheme } from 'styled-components';
 import Span from '../../../styles/template/span/span';
 import THEME from '../../../styles/theme';
 import Button from '../../shared/button';
-import { IImage } from '../interfaces';
+import { IImage } from '../../shared/interface/image';
 import {
 	Card,
 	CardFigure,

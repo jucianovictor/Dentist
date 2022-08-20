@@ -1,6 +1,6 @@
 import React from 'react';
 import { Color } from '../../../styles/theme';
-import IconProps from '../icon';
+import IconProps from '../interface/icon';
 import { ButtonContainer, IconContainer } from './style';
 
 interface Props {

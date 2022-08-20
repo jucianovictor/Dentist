@@ -1,4 +1,4 @@
-import { IImage } from '../interfaces';
+import { IImage } from '../../shared/interface/image';
 import { Company, Container, Title } from './style';
 
 interface Props {
