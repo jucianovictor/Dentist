@@ -61,7 +61,6 @@ const Option = styled.div`
 	cursor: pointer;
 	border: solid 5px transparent;
 	border-radius: 5px;
-	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
 	&:hover {
 		background-color: ${({ theme }) => theme.colors.primary.default};
