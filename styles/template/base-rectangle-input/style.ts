@@ -6,6 +6,10 @@ const BaseRectangleInput = styled(BaseInput)`
 	height: 60px;
 	border-radius: 10px;
 	text-align: start;
+
+	&:focus {
+		outline: 2px solid ${({ theme }) => theme.colors.primary.default};
+	}
 `;
 
 export default BaseRectangleInput;

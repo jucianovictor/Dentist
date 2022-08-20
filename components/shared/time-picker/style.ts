@@ -12,6 +12,10 @@ const Container = styled.div`
 const InputLabel = styled(BaseRectangleInput)`
 	user-select: none;
 	cursor: pointer;
+
+	&:focus {
+		outline: 2px solid ${({ theme }) => theme.colors.primary.default};
+	}
 `;
 
 const Dropdown = styled.div<{ toggle: boolean }>`
