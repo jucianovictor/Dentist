@@ -4,6 +4,7 @@ import { Select } from '../../../styles/template/select/style';
 import Span from '../../../styles/template/span/span';
 import Button from '../../shared/button';
 import DatePicker from '../../shared/date-picker';
+import TimePicker from '../../shared/time-picker';
 import { Container, DoctorImage, DoctorPicture, Form, Title } from './style';
 
 interface Props {
@@ -33,7 +34,12 @@ const MedicalApointment: React.FC<Props> = ({ theme }: Props) => {
 						placeholder="Data da consulta"
 						alt="Date picker"
 					/>
-					<BaseRectangleInput type="time" placeholder="Horário da Consulta" />
+					<TimePicker
+						placeholder="Hora da consulta"
+						value={null}
+						minuteStep={15}
+						alt="Time picker"
+					/>
 					<Select name="Tratamentos">
 						<option>Selecione o tipo de consulta</option>
 						<option>Selecione o tipo de consulta</option>

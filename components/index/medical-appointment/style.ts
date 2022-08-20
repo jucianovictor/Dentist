@@ -48,14 +48,9 @@ const Form = styled.form`
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(4, min-content);
 
-	select:nth-child(n) {
+	& select:nth-child(n) {
 		grid-column: 1/3;
 		grid-row: 3;
-	}
-
-	div:nth-child(2) {
-		grid-column: 1;
-		grid-row: 4;
 	}
 
 	@media (max-width: ${BREAKPOINTS.extraLarge}px) {
