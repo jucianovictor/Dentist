@@ -17,7 +17,7 @@ describe('DatePicker', () => {
 		expect(input).toBeTruthy();
 	});
 
-	it('should display nothing', async () => {
+	it('should be empty', async () => {
 		renderWithTheme(<DatePicker value={null} {...{ placeholder, alt }} />);
 
 		const input = screen.getByAltText(alt) as HTMLInputElement;
@@ -49,7 +49,7 @@ describe('DatePicker', () => {
 		);
 	});
 
-	it('should change value by onChange', async () => {
+	it('should activate the onChange', async () => {
 		let changed = false;
 		renderWithTheme(
 			<DatePicker
