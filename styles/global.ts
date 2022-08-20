@@ -18,12 +18,12 @@ export default createGlobalStyle`
   }
 
 	::-webkit-scrollbar {
-		width: 3px;
-		height: 3px;
+		width: 4px;
+		height: 4px;
 	}
 
 	::-webkit-scrollbar-track {
-		background-color: ${({ theme }) => theme.colors.secondary.light};
+		background-color: white;
 		border-radius: 20px;
 	}
 
