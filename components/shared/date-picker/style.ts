@@ -57,6 +57,7 @@ const Dropdown = styled.div<{ toggle: boolean }>`
 					${upDownAnimation(0, -10, 'px')} 0.5s ease-in-out;
 			  `
 			: 'none'};
+	z-index: 1;
 `;
 
 const MonthSwitcher = styled.div`

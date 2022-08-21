@@ -37,6 +37,7 @@ const Dropdown = styled.div<{ toggle: boolean }>`
 					${upDownAnimation(0, -10, 'px')} 0.5s ease-in-out;
 			  `
 			: 'none'};
+	z-index: 1;
 `;
 
 const SelectorsContainer = styled.div`
@@ -52,8 +53,8 @@ const Selector = styled.div<{ column: number }>`
 	grid-row: 1;
 	width: 100%;
 	height: 100%;
-	display: grid;
-	grid-template-columns: 100%;
+	display: flex;
+	flex-direction: column;
 	overflow-y: auto;
 `;
 
