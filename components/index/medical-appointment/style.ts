@@ -48,7 +48,7 @@ const Form = styled.form`
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(4, min-content);
 
-	& select:nth-child(n) {
+	& *:nth-child(5) {
 		grid-column: 1/3;
 		grid-row: 3;
 	}

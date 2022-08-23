@@ -1,9 +1,9 @@
 import { DefaultTheme } from 'styled-components';
 import BaseRectangleInput from '../../../styles/template/base-rectangle-input/style';
-import { Select } from '../../../styles/template/select/style';
 import Span from '../../../styles/template/span/span';
 import Button from '../../shared/button';
 import DatePicker from '../../shared/date-picker';
+import Select from '../../shared/select';
 import TimePicker from '../../shared/time-picker';
 import { Container, DoctorImage, DoctorPicture, Form, Title } from './style';
 
@@ -40,12 +40,16 @@ const MedicalApointment: React.FC<Props> = ({ theme }: Props) => {
 						minuteStep={15}
 						alt="Time picker"
 					/>
-					<Select name="Tratamentos">
-						<option>Selecione o tipo de consulta</option>
-						<option>Selecione o tipo de consulta</option>
-						<option>Selecione o tipo de consulta</option>
-						<option>Selecione o tipo de consulta</option>
-					</Select>
+					<Select<{ id: number; description: string }>
+						placeholder="Selecione o tipo de consulta"
+						options={[
+							{ id: 1, description: 'Consulta' },
+							{ id: 2, description: 'Obturação' },
+							{ id: 3, description: 'Clareamento' },
+							{ id: 4, description: 'Extração' },
+						]}
+						getLabel={value => value?.description}
+					/>
 					<Button
 						{...{
 							width: '215px',
