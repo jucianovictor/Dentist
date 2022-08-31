@@ -5,7 +5,6 @@ import { useTheme } from 'styled-components';
 import AboutMe from '../components/index/about-me';
 import ClinicStructure from '../components/index/clinic-structure';
 import Depositions from '../components/index/depositions';
-import Footer from '../components/index/footer';
 import CompanyHealth from '../components/index/health-insurance';
 import Main from '../components/index/main';
 import MedicalApointment from '../components/index/medical-appointment';
@@ -52,7 +51,6 @@ const LandingPage: React.FC<Props> = ({
 				<Schedules theme={theme} />
 				<CompanyHealth companyImages={companyImages} />
 				<MedicalApointment theme={theme} />
-				<Footer theme={theme} />
 			</SecondaryContent>
 		</>
 	);
