@@ -12,7 +12,7 @@ const Container = styled.section`
 	margin-bottom: 80px;
 
 	@media (max-width: ${BREAKPOINTS.large}px) {
-		grid-template-columns: minmax(min-content, 829px);
+		grid-template-columns: minmax(min-content, 740px);
 		grid-template-rows: 740px 1fr;
 	}
 `;

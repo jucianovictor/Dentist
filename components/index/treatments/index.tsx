@@ -38,7 +38,7 @@ const changeWordsColor = (text: string, theme: DefaultTheme) => {
 
 const Treatments: React.FC<Props> = ({ theme, cards }: Props) => {
 	return (
-		<Container>
+		<Container id="treatments">
 			<Title>Nossos Tratamentos</Title>
 			<CardsContainer>
 				{cards?.map((card, key) => (

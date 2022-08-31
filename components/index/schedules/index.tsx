@@ -32,7 +32,7 @@ const Schedule: React.FC<ScheduleProps> = ({ label }: ScheduleProps) => (
 );
 
 const Schedules: React.FC<Props> = ({ theme }: Props) => (
-	<Container>
+	<Container id="schedules">
 		<Schedule label="Segunda, Terça e Quarta" />
 		<Schedule label="Quinta e Sexta" />
 		<Schedule label="Finais de Semana" />

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { DefaultTheme } from 'styled-components';
 import Reception from '../../../public/images/recep.png';
 import Span from '../../../styles/template/span/span';
-import PlayIcon from '../../shared/play-icon';
+import Icon from '../../shared/icon';
 import {
 	Container,
 	Header,
@@ -44,7 +44,8 @@ const VideoPlayer: React.FC<Props> = ({ theme, src }) => {
 		<VideoContainer>
 			<Picture>
 				<Play aria-label="Play" onClick={() => openVideo(videoRef)}>
-					<PlayIcon
+					<Icon
+						icon="play"
 						color={theme.colors.accent.default}
 						width={89}
 						height={89}
@@ -66,7 +67,7 @@ const VideoPlayer: React.FC<Props> = ({ theme, src }) => {
 
 const WhyChooseUs: React.FC<Props> = ({ theme, src }: Props) => {
 	return (
-		<Container>
+		<Container id="why-choose-us">
 			<Header>
 				<Title>
 					<Span color={theme.colors.secondary.light}>Por que </Span>

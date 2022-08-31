@@ -3,7 +3,6 @@ import { DefaultTheme } from 'styled-components';
 import dentistaBanner from '../../../public/images/dentista_banner.png';
 import Span from '../../../styles/template/span/span';
 import Button from '../../shared/button';
-import WhatsappIcon from '../../shared/whatsapp-icon';
 import {
 	Aside,
 	Container,
@@ -18,7 +17,7 @@ interface Props {
 }
 
 const Main: React.FC<Props> = ({ theme }: Props) => (
-	<Container>
+	<Container id="home">
 		<Picture>
 			<Image
 				src={dentistaBanner}
@@ -46,10 +45,8 @@ const Main: React.FC<Props> = ({ theme }: Props) => (
 					text: 'Marque sua consulta',
 					themeColor: theme.colors.accent,
 					icon: {
-						component: WhatsappIcon,
-						props: {
-							color: theme.colors.accent.default,
-						},
+						icon: 'whatsapp',
+						color: theme.colors.accent.default,
 					},
 				}}
 			/>

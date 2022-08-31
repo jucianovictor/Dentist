@@ -13,54 +13,52 @@ interface Props {
 
 const MedicalApointment: React.FC<Props> = ({ theme }: Props) => {
 	return (
-		<>
-			<Container>
-				<Title>
-					Marque sua <Span color={theme.colors.primary.default}>consulta</Span>
-				</Title>
-				<DoctorPicture>
-					<DoctorImage
-						src="/images/aline-form.png"
-						alt="Doutora"
-						layout="fill"
-						objectFit="fill"
-					/>
-				</DoctorPicture>
-				<Form>
-					<BaseRectangleInput type="text" placeholder="Seu nome" />
-					<BaseRectangleInput type="email" placeholder="Seu e-mail" />
-					<DatePicker
-						value={null}
-						placeholder="Data da consulta"
-						alt="Date picker"
-					/>
-					<TimePicker
-						placeholder="Hora da consulta"
-						value={null}
-						minuteStep={15}
-						alt="Time picker"
-					/>
-					<Select<{ id: number; description: string }>
-						placeholder="Selecione o tipo de consulta"
-						options={[
-							{ id: 1, description: 'Consulta' },
-							{ id: 2, description: 'Obturação' },
-							{ id: 3, description: 'Clareamento' },
-							{ id: 4, description: 'Extração' },
-						]}
-						getLabel={value => value?.description}
-					/>
-					<Button
-						{...{
-							width: '215px',
-							text: 'Enviar',
-							borderRadius: '10px',
-							themeColor: theme.colors.accent,
-						}}
-					/>
-				</Form>
-			</Container>
-		</>
+		<Container id="medical-appointment">
+			<Title>
+				Marque sua <Span color={theme.colors.primary.default}>consulta</Span>
+			</Title>
+			<DoctorPicture>
+				<DoctorImage
+					src="/images/aline-form.png"
+					alt="Doutora"
+					layout="fill"
+					objectFit="fill"
+				/>
+			</DoctorPicture>
+			<Form>
+				<BaseRectangleInput type="text" placeholder="Seu nome" />
+				<BaseRectangleInput type="email" placeholder="Seu e-mail" />
+				<DatePicker
+					value={null}
+					placeholder="Data da consulta"
+					alt="Date picker"
+				/>
+				<TimePicker
+					placeholder="Hora da consulta"
+					value={null}
+					minuteStep={15}
+					alt="Time picker"
+				/>
+				<Select<{ id: number; description: string }>
+					placeholder="Selecione o tipo de consulta"
+					options={[
+						{ id: 1, description: 'Consulta' },
+						{ id: 2, description: 'Obturação' },
+						{ id: 3, description: 'Clareamento' },
+						{ id: 4, description: 'Extração' },
+					]}
+					getLabel={value => value?.description}
+				/>
+				<Button
+					{...{
+						width: '215px',
+						text: 'Enviar',
+						borderRadius: '10px',
+						themeColor: theme.colors.accent,
+					}}
+				/>
+			</Form>
+		</Container>
 	);
 };
 

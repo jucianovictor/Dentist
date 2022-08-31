@@ -5,7 +5,7 @@ import {
 	DCNode,
 } from '../../../model/utils/doubly-cyclic-linked-list';
 import Indirection from '../../../model/utils/indirection';
-import PlayIcon from '../../shared/play-icon';
+import Icon from '../../shared/icon';
 import DepositionCard, { Deposition } from './deposition-card';
 import {
 	Background,
@@ -125,7 +125,7 @@ const Depositions: React.FC<Props> = ({ theme }) => {
 	const canHandle = new Indirection(true);
 
 	return (
-		<Container>
+		<Container id="depositions">
 			<SubContainer>
 				<H2>Depoimentos</H2>
 				<ButtonContainer>
@@ -135,7 +135,11 @@ const Depositions: React.FC<Props> = ({ theme }) => {
 						}
 						aria-label="prev"
 					>
-						<PlayIcon color={theme.colors.accent.default} sizeMultiplier={2} />
+						<Icon
+							icon="play"
+							color={theme.colors.accent.default}
+							sizeMultiplier={2}
+						/>
 					</Button>
 					<Button
 						onClick={() =>
@@ -143,7 +147,11 @@ const Depositions: React.FC<Props> = ({ theme }) => {
 						}
 						aria-label="next"
 					>
-						<PlayIcon color={theme.colors.accent.default} sizeMultiplier={2} />
+						<Icon
+							icon="play"
+							color={theme.colors.accent.default}
+							sizeMultiplier={2}
+						/>
 					</Button>
 				</ButtonContainer>
 				<Background />

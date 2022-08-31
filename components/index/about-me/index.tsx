@@ -15,7 +15,7 @@ interface Props {
 }
 
 const AboutMe: React.FC<Props> = ({ theme }: Props) => (
-	<Container>
+	<Container id="about-me">
 		<Article>
 			<Title>Sobre mim</Title>
 			<ArticleSpanTitle color={theme.colors.secondary.light}>
