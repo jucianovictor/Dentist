@@ -3,4 +3,5 @@ export default interface IconProps {
 	sizeMultiplier?: number;
 	width?: number;
 	height?: number;
+	otherColors?: string[];
 }

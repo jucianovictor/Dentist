@@ -1,15 +1,12 @@
 import React from 'react';
 import { Color } from '../../../styles/theme';
-import IconProps from '../interface/icon';
+import Icon, { GlobalIconProps } from '../icon';
 import { ButtonContainer, IconContainer } from './style';
 
 interface Props {
 	text: string;
 	themeColor: Color;
-	icon?: {
-		component: React.FC<IconProps>;
-		props?: IconProps;
-	};
+	icon?: GlobalIconProps;
 	width?: string;
 	height?: string;
 	borderRadius?: string;
@@ -34,16 +31,7 @@ const Button: React.FC<Props> = ({
 			}}
 		>
 			{icon && (
-				<IconContainer {...{ themeColor }}>
-					{icon.component && icon.props
-						? icon.component({
-								color: icon.props.color ?? themeColor.default,
-								sizeMultiplier: icon.props.sizeMultiplier ?? 1,
-								width: icon.props.width,
-								height: icon.props.height,
-						  })
-						: icon.component({})}
-				</IconContainer>
+				<IconContainer {...{ themeColor }}>{<Icon {...icon} />}</IconContainer>
 			)}
 			{text}
 		</ButtonContainer>
