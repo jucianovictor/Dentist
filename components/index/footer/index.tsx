@@ -97,7 +97,11 @@ const Footer: React.FC<Props> = ({ theme }: Props) => {
 							target="_blank"
 							withIcons={true}
 						>
-							<Icon icon="location" color={theme.colors.secondary.light} />
+							<Icon
+								icon="location"
+								style="solid"
+								color={theme.colors.secondary.light}
+							/>
 							{address}
 						</Link>
 					</Links>

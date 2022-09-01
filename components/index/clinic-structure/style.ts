@@ -63,10 +63,10 @@ const Picture = styled.picture`
 		height: 100%;
 		transform: translateY(-100%);
 		clip-path: polygon(
-			36% 49%,
+			35% 49%,
 			49% 49%,
-			49% 36%,
-			51% 36%,
+			49% 35%,
+			51% 35%,
 			51% 49%,
 			65% 49%,
 			65% 51%,
@@ -74,7 +74,7 @@ const Picture = styled.picture`
 			51% 65%,
 			49% 65%,
 			49% 51%,
-			36% 51%
+			35% 51%
 		);
 		z-index: 3;
 		opacity: 0;

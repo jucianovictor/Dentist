@@ -1,6 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 import Span from '../../../styles/template/span/span';
 import { adjustLightness } from '../../../styles/utils/color-functions';
+import Icon from '../../shared/icon';
 import {
 	Container,
 	H2,
@@ -38,7 +39,9 @@ const Schedules: React.FC<Props> = ({ theme }: Props) => (
 		<Schedule label="Finais de Semana" />
 		<InfoCardsContainer>
 			<InfoCardContainer>
-				<IconContainer placeSelf="start" />
+				<IconContainer placeSelf="start">
+					<Icon icon="clock" color={theme.colors.primary.default} />
+				</IconContainer>
 				<H2 color={theme.colors.primary.default}>
 					<Span color={theme.colors.secondary.light}>Horário de </Span>
 					<span>Atendimento</span>
@@ -54,7 +57,9 @@ const Schedules: React.FC<Props> = ({ theme }: Props) => (
 			>
 				<IconContainer
 					bgColor={adjustLightness(theme.colors.primary.default, 16)}
-				/>
+				>
+					<Icon icon="location" color="#fff" />
+				</IconContainer>
 				<H2 color={theme.colors.primary.contrast}>Localização</H2>
 				<InfoCardContent color={theme.colors.primary.contrast}>
 					Rua Manoel Gomes de Souza (14-A), 307 W, Jardim Acácia - Tangará da

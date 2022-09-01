@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import upDownAnimation from '../../../styles/animations/up-down';
+import styled, { css } from 'styled-components';
+import moveAnimation from '../../../styles/animations/move';
 import BREAKPOINTS from '../../../styles/utils/breakpoints';
 
 const Container = styled.main`
@@ -55,15 +55,79 @@ const Picture = styled.picture`
 const PictureParralax = styled.div<{
 	left: number;
 	top: number;
-	size: number;
+	size?: number;
 }>`
-	width: ${props => props.size}px;
-	height: ${props => props.size}px;
-	left: ${props => props.left}%;
-	top: ${props => props.top}%;
-	box-shadow: 20px 50px 100px rgba(112, 97, 238, 0.53);
+	${({ size }) =>
+		size &&
+		css`
+			width: ${size}px;
+			height: ${size}px;
+		`};
+	left: ${({ left }) => left}%;
+	top: ${({ top }) => top}%;
 	border-radius: 20px;
 	position: absolute;
+`;
+
+const PictureParralaxContent = styled(PictureParralax)`
+	display: grid;
+	place-items: center;
+	background: linear-gradient(
+		135deg,
+		rgba(220, 217, 255, 0.41) 0%,
+		#f5f4ff 100%
+	);
+	box-shadow: 20px 50px 100px rgba(112, 97, 238, 0.53);
+`;
+
+const PictureParralaxCapsulle = styled(PictureParralax)<{
+	width?: number;
+	height?: number;
+}>`
+	${({ width }) => `width: ${width}px`};
+	${({ height }) => `height: ${height}px`};
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, max-content);
+	place-items: center;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 10px;
+	align-content: center;
+	background: linear-gradient(
+		135deg,
+		rgba(220, 217, 255, 0.41) 0%,
+		#f5f4ff 100%
+	);
+	box-shadow: 20px 50px 100px rgba(112, 97, 238, 0.32);
+	animation: ${moveAnimation(0, 20, '%', 'Y')} 4s infinite ease-in-out;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 1px;
+		height: 100%;
+		background: rgba(78, 76, 92, 0.19);
+	}
+
+	& span:nth-child(n) {
+		display: grid;
+		grid-row: 1;
+		grid-template-columns: 100%;
+		font-weight: 700;
+		font-size: 34px;
+		line-height: 60px;
+	}
+
+	& span:nth-child(1) {
+		grid-column: 1;
+	}
+
+	& span:nth-child(2) {
+		grid-column: 2;
+	}
 `;
 
 const PictureParralaxSolid = styled(PictureParralax)`
@@ -76,16 +140,8 @@ const PictureParralaxSolid = styled(PictureParralax)`
 	z-index: -1;
 `;
 
-const PictureParralaxContent = styled(PictureParralax)`
-	background: linear-gradient(
-		135deg,
-		rgba(220, 217, 255, 0.41) 0%,
-		#f5f4ff 100%
-	);
-`;
-
 const PictureParralaxIcon = styled(PictureParralaxContent)`
-	animation: ${upDownAnimation(0, 100, '%')} 4s infinite ease-in-out;
+	animation: ${moveAnimation(0, 20, '%')} 4s infinite ease-in-out;
 `;
 
 const Title = styled.h2`
@@ -100,7 +156,9 @@ export {
 	Container,
 	Aside,
 	Picture,
+	PictureParralax,
 	PictureParralaxIcon,
 	PictureParralaxSolid,
+	PictureParralaxCapsulle,
 	Title,
 };

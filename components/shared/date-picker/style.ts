@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components';
-import upDownAnimation from '../../../styles/animations/up-down';
+import moveAnimation from '../../../styles/animations/move';
 import BaseRectangleInput from '../../../styles/template/base-rectangle-input/style';
 import { adjustLightness } from '../../../styles/utils/color-functions';
 
@@ -54,7 +54,7 @@ const Dropdown = styled.div<{ toggle: boolean }>`
 	animation: ${({ toggle }) =>
 		toggle
 			? css`
-					${upDownAnimation(0, -10, 'px')} 0.5s ease-in-out;
+					${moveAnimation(0, -10, 'px')} 0.5s ease-in-out;
 			  `
 			: 'none'};
 	z-index: 1;

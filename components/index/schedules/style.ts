@@ -133,6 +133,8 @@ const InfoCardContainer = styled.article<{ bgColor?: string; color?: string }>`
 `;
 
 const IconContainer = styled.div<{ bgColor?: string; placeSelf?: string }>`
+	display: grid;
+	place-items: center;
 	place-self: ${({ placeSelf }) => placeSelf || 'end'};
 	width: 72px;
 	height: 72px;

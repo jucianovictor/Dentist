@@ -1,4 +1,5 @@
 import React from 'react';
+import ClockIcon from '../icons/clock';
 import FacebookIcon from '../icons/facebook';
 import InstagramIcon from '../icons/instagram';
 import LinkedinIcon from '../icons/linkedin';
@@ -15,6 +16,7 @@ export type AvailableIcons =
 	| 'facebook'
 	| 'play'
 	| 'phone'
+	| 'clock'
 	| 'location';
 
 export type GlobalIconProps = { icon: AvailableIcons } & IconProps;
@@ -26,6 +28,7 @@ const icons: Record<AvailableIcons, (iconProps: IconProps) => JSX.Element> = {
 	facebook: (iconProps: IconProps) => <FacebookIcon {...iconProps} />,
 	play: (iconProps: IconProps) => <PlayIcon {...iconProps} />,
 	phone: (iconProps: IconProps) => <PhoneIcon {...iconProps} />,
+	clock: (iconProps: IconProps) => <ClockIcon {...iconProps} />,
 	location: (iconProps: IconProps) => <LocationIcon {...iconProps} />,
 };
 

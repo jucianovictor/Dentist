@@ -3,5 +3,6 @@ export default interface IconProps {
 	sizeMultiplier?: number;
 	width?: number;
 	height?: number;
+	style?: 'solid' | 'regular';
 	otherColors?: string[];
 }
